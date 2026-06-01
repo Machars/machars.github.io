@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是桥接模式？—— 让光猫"退居二线"的正确姿势 — Router Tips Station</title>
+  <meta name="description" content="光猫桥接是什么意思？和路由模式有什么区别？改桥接的好处和风险是什么？">
+  <meta property="og:title" content="什么是桥接模式？—— 让光猫"退居二线"的正确姿势 — Router Tips Station">
+  <meta property="og:description" content="光猫桥接是什么意思？和路由模式有什么区别？改桥接的好处和风险是什么？">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/what-is-bridge-mode.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/what-is-bridge-mode.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/what-is-bridge-mode.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/what-is-bridge-mode.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/what-is-bridge-mode.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是桥接模式？—— 让光猫\"退居二线\"的正确姿势",
+  "description": "光猫桥接是什么意思？和路由模式有什么区别？改桥接的好处和风险是什么？",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "General Tips",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Basic Concepts",
+        "item": "https://router-tips.example.com/en-US/index.html?category=basics"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "什么是桥接模式？—— 让光猫\"退居二线\"的正确姿势"
+      }
+    ]
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是桥接模式？—— 让光猫\"退居二线\"的正确姿势",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "### 光猫的两种工作模式 场景：光猫=前台接待，路由器=你自己的管家 - 路由模式（默认）： 前台（光猫）什么都干——接电话（拨号）、分配工位（DHCP）、WiFi、防火墙…自己的管家（路由器）只能当前台的\"小弟\"，功能受限 - 桥接模式： 前台只负责\"把客人领进门\"（光电转换），其他事全部交给管家（路由器）。管家能力更强（功能多），还不用看前台脸色（性能瓶颈） ### 为什么建议光猫桥接？ | 路由模式的问题 | 桥接模式的改善 | |--------------|---------------| | 光猫性能差，带机量小 | 路由器性能充分释放 | | 双层NAT，联机游戏受限 | 单层NAT，游戏体验好 | | 光猫设置被运营商锁 | 路由器功能完全可控 | | 光猫WiFi很弱 | 路由器WiFi做主覆盖 | ### 改桥接的正确流程 1. 记录宽带账号密码（光猫背面贴纸或问运营商） 2. 致电运营商：\"请把光猫改成桥接模式\" 3. 等待远程配置（2-5分钟，光猫会重启） 4. 光猫重启后WiFi消失（正常！光猫WiFi在桥接模式下不可用） 5. 进路由器后台→上网设置→PP..."
+      }
+    }
+  ]
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/what-is-bridge-mode.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=general">General Tips</a></li>
+    <li><a href="../index.html?category=basics">Basic Concepts</a></li>
+    <li aria-current="page">什么是桥接模式？—— 让光猫"退居二线"的正确姿势</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 General Tips
+          </span>
+        </div>
+        <h1 class="article-header__title">什么是桥接模式？—— 让光猫"退居二线"的正确姿势</h1>
+        <p class="article-header__summary">光猫桥接是什么意思？和路由模式有什么区别？改桥接的好处和风险是什么？</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=basics" class="article-meta-bar__category">📖 Basic Concepts</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">Beginner</span>
+        <span class="article-meta-bar__brand">🛜 General Tips</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%85%89%E7%8C%AB%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F">1. 光猫的两种工作模式</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BB%BA%E8%AE%AE%E5%85%89%E7%8C%AB%E6%A1%A5%E6%8E%A5%EF%BC%9F">2. 为什么建议光猫桥接？</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E6%94%B9%E6%A1%A5%E6%8E%A5%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%B5%81%E7%A8%8B">3. 改桥接的正确流程</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="光猫的两种工作模式">光猫的两种工作模式</h3>
+
+<div class="scenario-box">
+<strong>场景：光猫=前台接待，路由器=你自己的管家</strong>
+
+<ul><li><strong>路由模式（默认）：</strong> 前台（光猫）什么都干——接电话（拨号）、分配工位（DHCP）、WiFi、防火墙…自己的管家（路由器）只能当前台的"小弟"，功能受限</li>
+<li><strong>桥接模式：</strong> 前台只负责"把客人领进门"（光电转换），其他事全部交给管家（路由器）。管家能力更强（功能多），还不用看前台脸色（性能瓶颈）</li>
+</ul></div>
+
+<h3 id="为什么建议光猫桥接？">为什么建议光猫桥接？</h3>
+
+<div class="table-wrapper"><table class="article-table"><tr><th>路由模式的问题</th><th>桥接模式的改善</th></tr><tr><td>--------------</td><td>---------------</td></tr><tr><td>光猫性能差，带机量小</td><td>路由器性能充分释放</td></tr><tr><td>双层NAT，联机游戏受限</td><td>单层NAT，游戏体验好</td></tr><tr><td>光猫设置被运营商锁</td><td>路由器功能完全可控</td></tr><tr><td>光猫WiFi很弱</td><td>路由器WiFi做主覆盖</td></tr></table></div>
+<h3 id="改桥接的正确流程">改桥接的正确流程</h3>
+
+<div class="step-box">
+<ul><li>记录宽带账号密码（光猫背面贴纸或问运营商）</li>
+<li>致电运营商："请把光猫改成桥接模式"</li>
+<li>等待远程配置（2-5分钟，光猫会重启）</li>
+<li>光猫重启后WiFi消失（正常！光猫WiFi在桥接模式下不可用）</li>
+<li>进路由器后台→上网设置→PPPoE→填入宽带账号密码</li>
+<li>保存→路由器拨号成功→正常上网</li>
+</ul></div>
+
+<div class="tip-highlight">
+<p>🌉 <strong>核心记忆：</strong> 桥接=光猫只做光电转换，拨号和路由全交给路由器。好处是性能更好、功能更强、联机游戏不受双层NAT困扰。改桥接需要运营商配合，一个电话就能搞定。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#桥接</span><span class="article-tag">#光猫</span><span class="article-tag">#路由模式</span><span class="article-tag">#拨号</span><span class="article-tag">#基础概念</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="what-is-pppoe.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">什么是PPPoE拨号？—— 宽带连接的"身份证验证"</span></a>
+  <a href="what-is-wps-button.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">什么是WPS按钮？—— 路由器上那个"一键连WiFi"的神秘按键</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="what-is-ip-address.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是IP地址？—— 互联网世界的"家庭住址"</span>
+      <span class="article-related__desc">192.168.1.1是什么？公网IP和内网IP有什么区别？用寄快递的比喻让你彻底搞懂IP地址。</span>
+    </a>
+    
+    <a href="what-is-bandwidth-mbps.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是带宽和Mbps？—— 你家网速的"水管"</span>
+      <span class="article-related__desc">100M宽带为什么下载只有10MB/s？Mbps和MB/s到底什么关系？用水管粗细的比喻让你秒懂。</span>
+    </a>
+    
+    <a href="what-is-wifi.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是WiFi？—— 你身边看不见的"无线电波"</span>
+      <span class="article-related__desc">WiFi到底是什么？2.4G和5G有什么区别？WiFi 5/6/7又是什么？用最通俗的话讲清楚。</span>
+    </a>
+    
+    <a href="what-is-nat.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是NAT？—— 内网和外网的"翻译官"</span>
+      <span class="article-related__desc">为什么你家多台设备共用一个公网IP还能正常上网？NAT是怎么工作的？用公寓楼门禁的比喻彻底搞懂。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

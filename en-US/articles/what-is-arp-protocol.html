@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是ARP？—— IP地址如何找到对应的MAC地址 — Router Tips Station</title>
+  <meta name="description" content="ARP协议是怎么工作的？ARP欺骗是什么攻击？为什么公共WiFi下的ARP欺骗非常危险？">
+  <meta property="og:title" content="什么是ARP？—— IP地址如何找到对应的MAC地址 — Router Tips Station">
+  <meta property="og:description" content="ARP协议是怎么工作的？ARP欺骗是什么攻击？为什么公共WiFi下的ARP欺骗非常危险？">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/what-is-arp-protocol.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/what-is-arp-protocol.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/what-is-arp-protocol.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/what-is-arp-protocol.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/what-is-arp-protocol.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是ARP？—— IP地址如何找到对应的MAC地址",
+  "description": "ARP协议是怎么工作的？ARP欺骗是什么攻击？为什么公共WiFi下的ARP欺骗非常危险？",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "General Tips",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Basic Concepts",
+        "item": "https://router-tips.example.com/en-US/index.html?category=basics"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "什么是ARP？—— IP地址如何找到对应的MAC地址"
+      }
+    ]
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是ARP？—— IP地址如何找到对应的MAC地址",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "### 一句话理解ARP 场景：ARP = 小区里喊一嗓子问\"谁是XX号房？\" 你知道朋友住在\"301室\"（IP地址是192.168.1.5），但你要亲手递东西给他——你站在走廊喊：\"谁是301室的？你的身份证号多少？\" 301室的人回应：\"我是！我的身份证号（MAC地址）是AA:BB:CC:DD:EE:FF！\" 这就是ARP——在网络里根据IP地址找到对应的MAC地址，因为最终数据要送到具体的\"硬件设备\"。 ### ARP欺骗：最危险的局域网攻击 真实案例——咖啡厅WiFi里的\"中间人\" 你在咖啡厅连公共WiFi，黑客也在同一网络： 1. 黑客持续发送假ARP消息：\"我是192.168.1.1（路由器）！MAC是XX:XX:XX！\" 2. 你的手机被误导：把数据全发给黑客的MAC 3. 黑客转发你的数据给真正路由器（让你感觉不到异常） 4. 你的所有流量经过黑客的设备 → 密码、银行卡号全被截获 这就是ARP欺骗——因为没有认证机制，谁喊得\"快\"就信谁。 ### 如何防ARP欺骗？ 家庭环境：ARP欺骗风险极低（你得先让黑客连上你家WiFi） 公共WiFi：ARP欺骗是真实威胁 → ..."
+      }
+    }
+  ]
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/what-is-arp-protocol.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=general">General Tips</a></li>
+    <li><a href="../index.html?category=basics">Basic Concepts</a></li>
+    <li aria-current="page">什么是ARP？—— IP地址如何找到对应的MAC地址</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 General Tips
+          </span>
+        </div>
+        <h1 class="article-header__title">什么是ARP？—— IP地址如何找到对应的MAC地址</h1>
+        <p class="article-header__summary">ARP协议是怎么工作的？ARP欺骗是什么攻击？为什么公共WiFi下的ARP欺骗非常危险？</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=basics" class="article-meta-bar__category">📖 Basic Concepts</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">Beginner</span>
+        <span class="article-meta-bar__brand">🛜 General Tips</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%90%86%E8%A7%A3ARP">1. 一句话理解ARP</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#ARP%E6%AC%BA%E9%AA%97%EF%BC%9A%E6%9C%80%E5%8D%B1%E9%99%A9%E7%9A%84%E5%B1%80%E5%9F%9F%E7%BD%91%E6%94%BB%E5%87%BB">2. ARP欺骗：最危险的局域网攻击</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%A6%82%E4%BD%95%E9%98%B2ARP%E6%AC%BA%E9%AA%97%EF%BC%9F">3. 如何防ARP欺骗？</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="一句话理解ARP">一句话理解ARP</h3>
+
+<div class="scenario-box">
+<strong>场景：ARP = 小区里喊一嗓子问"谁是XX号房？"</strong>
+
+<p>你知道朋友住在"301室"（IP地址是192.168.1.5），但你要亲手递东西给他——你站在走廊喊："谁是301室的？你的身份证号多少？"</p>
+
+<p>301室的人回应："我是！我的身份证号（MAC地址）是AA:BB:CC:DD:EE:FF！"</p>
+
+<p>这就是ARP——在网络里根据IP地址找到对应的MAC地址，因为最终数据要送到具体的"硬件设备"。</p>
+</div>
+
+<h3 id="ARP欺骗：最危险的局域网攻击">ARP欺骗：最危险的局域网攻击</h3>
+
+<div class="example-box">
+<strong>真实案例——咖啡厅WiFi里的"中间人"</strong>
+
+<p>你在咖啡厅连公共WiFi，黑客也在同一网络：</p>
+<ul><li>黑客持续发送假ARP消息："我是192.168.1.1（路由器）！MAC是XX:XX:XX！"</li>
+<li>你的手机被误导：把数据全发给黑客的MAC</li>
+<li>黑客转发你的数据给真正路由器（让你感觉不到异常）</li>
+<li>你的所有流量经过黑客的设备 → 密码、银行卡号全被截获</li>
+</ul>
+<p>这就是ARP欺骗——因为没有认证机制，谁喊得"快"就信谁。</p>
+</div>
+
+<h3 id="如何防ARP欺骗？">如何防ARP欺骗？</h3>
+
+<pre class="article-pre"><code>家庭环境：ARP欺骗风险极低（你得先让黑客连上你家WiFi）
+公共WiFi：ARP欺骗是真实威胁
+→ 不要在不信任的WiFi上输入密码/支付信息
+→ 开VPN可以防止ARP欺骗（流量加密，截获也看不懂）
+→ 路由器有"ARP绑定/IP-MAC绑定"功能可防御
+
+路由器后台 → 安全/ARP绑定 → 绑定关键设备IP和MAC
+→ 即使有人ARP欺骗，你的设备不认假的
+</code></pre>
+
+<div class="tip-highlight">
+<p>📢 <strong>核心记忆：</strong> ARP=局域网里"喊IP找MAC"的协议。ARP欺骗让黑客截获你的流量——公共WiFi尤其危险。家庭网络风险低。重要操作不要在不信任的WiFi下进行。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#ARP</span><span class="article-tag">#ARP欺骗</span><span class="article-tag">#MAC地址</span><span class="article-tag">#协议</span><span class="article-tag">#基础概念</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="ethernet-cable-cat5e-cat6-cat7.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">什么是Cat5e/Cat6/Cat7网线？—— 买错网线网速直接砍半</span></a>
+  <a href="doh-dot-secure-dns.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">什么是DoH/DoT安全DNS？—— 给DNS查询穿上"隐身衣"</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="what-is-ip-address.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是IP地址？—— 互联网世界的"家庭住址"</span>
+      <span class="article-related__desc">192.168.1.1是什么？公网IP和内网IP有什么区别？用寄快递的比喻让你彻底搞懂IP地址。</span>
+    </a>
+    
+    <a href="what-is-bandwidth-mbps.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是带宽和Mbps？—— 你家网速的"水管"</span>
+      <span class="article-related__desc">100M宽带为什么下载只有10MB/s？Mbps和MB/s到底什么关系？用水管粗细的比喻让你秒懂。</span>
+    </a>
+    
+    <a href="what-is-wifi.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是WiFi？—— 你身边看不见的"无线电波"</span>
+      <span class="article-related__desc">WiFi到底是什么？2.4G和5G有什么区别？WiFi 5/6/7又是什么？用最通俗的话讲清楚。</span>
+    </a>
+    
+    <a href="what-is-nat.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是NAT？—— 内网和外网的"翻译官"</span>
+      <span class="article-related__desc">为什么你家多台设备共用一个公网IP还能正常上网？NAT是怎么工作的？用公寓楼门禁的比喻彻底搞懂。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

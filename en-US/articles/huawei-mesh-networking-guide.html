@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华为凌霄子母路由Mesh组网实战 — Router Tips Station</title>
+  <meta name="description" content="Q6/Q6E电力线版和无线版如何实现全屋无缝漫游，大户型组网最佳实践。">
+  <meta property="og:title" content="华为凌霄子母路由Mesh组网实战 — Router Tips Station">
+  <meta property="og:description" content="Q6/Q6E电力线版和无线版如何实现全屋无缝漫游，大户型组网最佳实践。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/huawei-mesh-networking-guide.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/huawei-mesh-networking-guide.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/huawei-mesh-networking-guide.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/huawei-mesh-networking-guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/huawei-mesh-networking-guide.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "华为凌霄子母路由Mesh组网实战",
+  "description": "Q6/Q6E电力线版和无线版如何实现全屋无缝漫游，大户型组网最佳实践。",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Huawei",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=huawei"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Mesh Networking",
+        "item": "https://router-tips.example.com/en-US/index.html?category=mesh"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "华为凌霄子母路由Mesh组网实战"
+      }
+    ]
+  }
+}</script>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/huawei-mesh-networking-guide.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=huawei">Huawei</a></li>
+    <li><a href="../index.html?category=mesh">Mesh Networking</a></li>
+    <li aria-current="page">华为凌霄子母路由Mesh组网实战</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🔷 Huawei
+          </span>
+        </div>
+        <h1 class="article-header__title">华为凌霄子母路由Mesh组网实战</h1>
+        <p class="article-header__summary">Q6/Q6E电力线版和无线版如何实现全屋无缝漫游，大户型组网最佳实践。</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=mesh" class="article-meta-bar__category">🕸️ Mesh Networking</a>
+        <span class="article-meta-bar__level article-meta-bar__level--intermediate">Intermediate</span>
+        <span class="article-meta-bar__brand">🔷 Huawei</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%8D%8E%E4%B8%BAMesh%E7%BB%84%E7%BD%91%E6%96%B9%E5%BC%8F">1. 华为Mesh组网方式</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#Q6%E7%94%B5%E5%8A%9B%E7%BA%BF%E7%89%88%E7%BB%84%E7%BD%91%E6%AD%A5%E9%AA%A4">2. Q6电力线版组网步骤</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">3. 最佳实践</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#802.11k%2Fv%2Fr%E6%97%A0%E7%BC%9D%E6%BC%AB%E6%B8%B8">4. 802.11k/v/r无缝漫游</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="华为Mesh组网方式">华为Mesh组网方式</h3>
+
+<p>华为支持三种组网方式（按稳定性排序）：</p>
+<ul><li><strong>有线组网</strong> — 母路由LAN口接网线到子路由WAN口，信号无损</li>
+<li><strong>电力线组网</strong> — Q6/Q6E系列支持，通过家中电线传输信号</li>
+<li><strong>无线组网</strong> — 纯WiFi中继，最方便但损耗最大</li>
+</ul>
+<h3 id="Q6电力线版组网步骤">Q6电力线版组网步骤</h3>
+<ul><li>先配置好母路由</li>
+<li>将子路由插入其他房间墙插（建议直接插墙，不用排插）</li>
+<li>子路由指示灯会自动从红灯→白灯闪烁→蓝灯常亮</li>
+<li>蓝灯常亮表示Mesh成功</li>
+</ul>
+<h3 id="最佳实践">最佳实践</h3>
+<ul><li>子路由距离母路由不超过2个断路器跳</li>
+<li>避开大功率电器插座（空调、冰箱）</li>
+<li>户型超过200㎡建议3节点起步</li>
+<li>在智慧生活APP中可查看Mesh拓扑图</li>
+</ul>
+<h3 id="802.11k/v/r无缝漫游">802.11k/v/r无缝漫游</h3>
+<p>华为路由器默认开启快速漫游协议，设备在节点间切换仅需50-100ms，打视频电话、玩游戏几乎无感。</p>
+
+<div class="tip-highlight">
+<p>🏠 <strong>实测：</strong>200㎡平层，1个母路由+2个子路由（电力线），全屋5GHz覆盖，漫游切换延迟<80ms。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#Mesh</span><span class="article-tag">#凌霄芯片</span><span class="article-tag">#无缝漫游</span><span class="article-tag">#Q6</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <span></span>
+  <a href="huawei-parental-controls.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">华为路由器「儿童上网保护」使用指南</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="wifi-mesh-solutions-comparison.html" class="article-related__card">
+      <span class="article-related__category">🕸️ Mesh Networking</span>
+      <span class="article-related__title">各种WiFi Mesh方案大横评</span>
+      <span class="article-related__desc">电力猫、无线Mesh、有线Mesh到底哪个好？AC+AP和Mesh怎么选？一次讲清。</span>
+    </a>
+    
+    <a href="huawei-parental-controls.html" class="article-related__card">
+      <span class="article-related__category">🚀 Performance</span>
+      <span class="article-related__title">华为路由器「儿童上网保护」使用指南</span>
+      <span class="article-related__desc">控制孩子的上网时间、过滤不良内容、查看访问记录，家长的数字化管理利器。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

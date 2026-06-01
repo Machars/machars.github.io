@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是光猫的四种状态指示灯？—— 看灯知网络 — Router Tips Station</title>
+  <meta name="description" content="PON、LOS、LAN、电源灯各自代表什么？红灯闪烁该重启还是报修？一篇文章搞定。">
+  <meta property="og:title" content="什么是光猫的四种状态指示灯？—— 看灯知网络 — Router Tips Station">
+  <meta property="og:description" content="PON、LOS、LAN、电源灯各自代表什么？红灯闪烁该重启还是报修？一篇文章搞定。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/ont-modem-indicator-lights.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/ont-modem-indicator-lights.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/ont-modem-indicator-lights.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/ont-modem-indicator-lights.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/ont-modem-indicator-lights.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是光猫的四种状态指示灯？—— 看灯知网络",
+  "description": "PON、LOS、LAN、电源灯各自代表什么？红灯闪烁该重启还是报修？一篇文章搞定。",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "General Tips",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Basic Concepts",
+        "item": "https://router-tips.example.com/en-US/index.html?category=basics"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "什么是光猫的四种状态指示灯？—— 看灯知网络"
+      }
+    ]
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是光猫的四种状态指示灯？—— 看灯知网络",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "### 光猫指示灯速查 | 指示灯 | 常亮 | 闪烁 | 熄灭 | |--------|------|------|------| | 电源(POW) | 正常通电 | — | 没通电 | | PON/光信号 | ✅ 注册成功 | ⚠️ 正在注册 | ❌ 没光纤信号 | | LOS | ❌ 光信号丢失 | ❌ 光信号弱 | ✅ 正常 | | LAN | 网线已插 | 有数据传输 | 网线没插 | ### 常见灯语翻译 场景一：LOS闪红灯 翻译：光猫收不到光纤信号 常见原因：光纤线折了/断了/光纤头脏了/楼道分光器故障 解决：检查光纤线是否弯折→重启光猫→还是红灯→打运营商电话报修 → 自己修不了，不要乱动光纤头！ 场景二：PON灯不亮 翻译：光猫没有注册到运营商网络 常见原因：欠费/光衰太大/运营商侧故障 解决：先确认没有欠费→重启光猫→还不行→打运营商 场景三：PON灯常亮但上不了网 翻译：光猫已注册但网络不通 常见原因：路由器没拨号/账号密码错 解决：检查路由器状态→重拨PPPoE 💡 核心记忆： LOS红灯=光纤断了→报修。PON不亮=没注册→检查欠费后报修。PON常亮上不..."
+      }
+    }
+  ]
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/ont-modem-indicator-lights.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=general">General Tips</a></li>
+    <li><a href="../index.html?category=basics">Basic Concepts</a></li>
+    <li aria-current="page">什么是光猫的四种状态指示灯？—— 看灯知网络</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 General Tips
+          </span>
+        </div>
+        <h1 class="article-header__title">什么是光猫的四种状态指示灯？—— 看灯知网络</h1>
+        <p class="article-header__summary">PON、LOS、LAN、电源灯各自代表什么？红灯闪烁该重启还是报修？一篇文章搞定。</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=basics" class="article-meta-bar__category">📖 Basic Concepts</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">Beginner</span>
+        <span class="article-meta-bar__brand">🛜 General Tips</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%85%89%E7%8C%AB%E6%8C%87%E7%A4%BA%E7%81%AF%E9%80%9F%E6%9F%A5">1. 光猫指示灯速查</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%B8%B8%E8%A7%81%E7%81%AF%E8%AF%AD%E7%BF%BB%E8%AF%91">2. 常见灯语翻译</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="光猫指示灯速查">光猫指示灯速查</h3>
+
+<div class="table-wrapper"><table class="article-table"><tr><th>指示灯</th><th>常亮</th><th>闪烁</th><th>熄灭</th></tr><tr><td>--------</td><td>------</td><td>------</td><td>------</td></tr><tr><td>电源(POW)</td><td>正常通电</td><td>—</td><td>没通电</td></tr><tr><td>PON/光信号</td><td>✅ 注册成功</td><td>⚠️ 正在注册</td><td>❌ 没光纤信号</td></tr><tr><td>LOS</td><td>❌ 光信号丢失</td><td>❌ 光信号弱</td><td>✅ 正常</td></tr><tr><td>LAN</td><td>网线已插</td><td>有数据传输</td><td>网线没插</td></tr></table></div>
+<h3 id="常见灯语翻译">常见灯语翻译</h3>
+
+<div class="example-box">
+<strong>场景一：LOS闪红灯</strong>
+<p>翻译：光猫收不到光纤信号</p>
+<p>常见原因：光纤线折了/断了/光纤头脏了/楼道分光器故障</p>
+<p>解决：检查光纤线是否弯折→重启光猫→还是红灯→打运营商电话报修</p>
+<p>→ 自己修不了，不要乱动光纤头！</p>
+
+<strong>场景二：PON灯不亮</strong>
+<p>翻译：光猫没有注册到运营商网络</p>
+<p>常见原因：欠费/光衰太大/运营商侧故障</p>
+<p>解决：先确认没有欠费→重启光猫→还不行→打运营商</p>
+
+<strong>场景三：PON灯常亮但上不了网</strong>
+<p>翻译：光猫已注册但网络不通</p>
+<p>常见原因：路由器没拨号/账号密码错</p>
+<p>解决：检查路由器状态→重拨PPPoE</p>
+</div>
+
+<div class="tip-highlight">
+<p>💡 <strong>核心记忆：</strong> LOS红灯=光纤断了→报修。PON不亮=没注册→检查欠费后报修。PON常亮上不了网=路由问题→查路由器。LAN闪烁有节奏=正常传输，疯狂闪=有大流量。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#光猫</span><span class="article-tag">#指示灯</span><span class="article-tag">#PON</span><span class="article-tag">#LOS</span><span class="article-tag">#故障</span><span class="article-tag">#基础概念</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="what-is-2-5g-ethernet.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">什么是2.5G网口？—— 千兆之上的"新标准接口"</span></a>
+  <a href="router-antenna-gain-dbi.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">什么是路由器天线增益？—— dBi值越大越好吗？</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="what-is-ip-address.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是IP地址？—— 互联网世界的"家庭住址"</span>
+      <span class="article-related__desc">192.168.1.1是什么？公网IP和内网IP有什么区别？用寄快递的比喻让你彻底搞懂IP地址。</span>
+    </a>
+    
+    <a href="what-is-bandwidth-mbps.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是带宽和Mbps？—— 你家网速的"水管"</span>
+      <span class="article-related__desc">100M宽带为什么下载只有10MB/s？Mbps和MB/s到底什么关系？用水管粗细的比喻让你秒懂。</span>
+    </a>
+    
+    <a href="what-is-wifi.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是WiFi？—— 你身边看不见的"无线电波"</span>
+      <span class="article-related__desc">WiFi到底是什么？2.4G和5G有什么区别？WiFi 5/6/7又是什么？用最通俗的话讲清楚。</span>
+    </a>
+    
+    <a href="what-is-nat.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是NAT？—— 内网和外网的"翻译官"</span>
+      <span class="article-related__desc">为什么你家多台设备共用一个公网IP还能正常上网？NAT是怎么工作的？用公寓楼门禁的比喻彻底搞懂。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

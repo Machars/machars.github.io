@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>路由器技巧站 — 你的家庭网络指南</title>
+  <meta name="description" content="涵盖各大品牌路由器的使用技巧、设置教程、优化方法和故障排查指南。零基础也能看懂的网络知识。">
+  <meta property="og:title" content="路由器技巧站 — 你的家庭网络指南">
+  <meta property="og:description" content="涵盖各大品牌路由器的使用技巧、设置教程、优化方法和故障排查指南。零基础也能看懂的网络知识。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://router-tips.example.com/zh-CN/index.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/zh-CN/index.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/index.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/index.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "路由器技巧站",
+  "description": "涵盖各大品牌路由器的使用技巧、设置教程、优化方法和故障排查指南。零基础也能看懂的网络知识。",
+  "url": "https://router-tips.example.com/zh-CN/index.html",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://router-tips.example.com/zh-CN/index.html?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>路由器技巧站</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#home" class="nav__link">首页</a></li>
+        <li><a href="#brands" class="nav__link">品牌</a></li>
+        <li><a href="#categories" class="nav__link">分类</a></li>
+        <li><a href="#tips" class="nav__link">技巧</a></li>
+      </ul>
+      <div class="nav__article-actions">
+        <a href="../en-US/index.html" class="nav__lang-link">🌐 English</a>
+      </div>
+      <button class="nav__toggle" aria-label="menu" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        掌握你的<span class="hero__highlight">路由器</span>
+      </h1>
+      <p class="hero__desc">从小白到高手，一站式路由器使用技巧大全。涵盖小米、华为、TP-LINK、华硕、网件等主流品牌</p>
+      <div class="hero__search">
+        <input type="text" class="hero__search-input" placeholder="搜索路由器技巧，如「WiFi信号差」「端口转发」..." id="searchInput">
+        <button class="hero__search-btn" id="searchBtn">🔍 搜索</button>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat"><strong id="tipCount">110</strong><span>篇技巧文章</span></div>
+        <div class="hero__stat"><strong id="brandCount">8</strong><span>个品牌覆盖</span></div>
+        <div class="hero__stat"><strong id="cateCount">8</strong><span>个分类维度</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google 广告位：Hero 下方横幅 -->
+  <div class="ad-container ad-container--banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <section class="section" id="brands">
+    <div class="container">
+      <h2 class="section__title">按品牌筛选</h2>
+      <div class="brand-filter" id="brandFilter">
+        <button class="filter-chip filter-chip--active" data-brand="all" style=""> 全部品牌</button>
+          <button class="filter-chip" data-brand="xiaomi" style="--chip-color:#ff6900">📱 小米</button>
+          <button class="filter-chip" data-brand="huawei" style="--chip-color:#cf0a2c">🔴 华为</button>
+          <button class="filter-chip" data-brand="tplink" style="--chip-color:#00b049">🔷 TP-LINK</button>
+          <button class="filter-chip" data-brand="asus" style="--chip-color:#0071e3">⚡ 华硕</button>
+          <button class="filter-chip" data-brand="netgear" style="--chip-color:#6441a5">🌐 网件</button>
+          <button class="filter-chip" data-brand="tenda" style="--chip-color:#e67e22">🔶 腾达</button>
+          <button class="filter-chip" data-brand="ruijie" style="--chip-color:#27ae60">🟢 锐捷</button>
+          <button class="filter-chip" data-brand="general" style="--chip-color:#6366f1">🛜 通用技巧</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="categories">
+    <div class="container">
+      <h2 class="section__title">按分类浏览</h2>
+      <div class="category-grid" id="categoryGrid">
+        <div class="cat-card" data-category="basics">
+          <span class="cat-card__icon">📖</span>
+          <span class="cat-card__name">基础概念</span>
+          <span class="cat-card__count">50 篇</span>
+        </div>
+        <div class="cat-card" data-category="setup">
+          <span class="cat-card__icon">🎓</span>
+          <span class="cat-card__name">以TP-LINK为样板，教你从路由器小白到大神</span>
+          <span class="cat-card__count">16 篇</span>
+        </div>
+        <div class="cat-card" data-category="optimize">
+          <span class="cat-card__icon">🚀</span>
+          <span class="cat-card__name">性能优化</span>
+          <span class="cat-card__count">8 篇</span>
+        </div>
+        <div class="cat-card" data-category="security">
+          <span class="cat-card__icon">🔒</span>
+          <span class="cat-card__name">安全防护</span>
+          <span class="cat-card__count">7 篇</span>
+        </div>
+        <div class="cat-card" data-category="troubleshoot">
+          <span class="cat-card__icon">🔧</span>
+          <span class="cat-card__name">故障排查</span>
+          <span class="cat-card__count">3 篇</span>
+        </div>
+        <div class="cat-card" data-category="advanced">
+          <span class="cat-card__icon">🧠</span>
+          <span class="cat-card__name">高级玩法</span>
+          <span class="cat-card__count">9 篇</span>
+        </div>
+        <div class="cat-card" data-category="mesh">
+          <span class="cat-card__icon">🏠</span>
+          <span class="cat-card__name">Mesh组网</span>
+          <span class="cat-card__count">2 篇</span>
+        </div>
+        <div class="cat-card" data-category="buying">
+          <span class="cat-card__icon">🛒</span>
+          <span class="cat-card__name">选购指南</span>
+          <span class="cat-card__count">15 篇</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tips">
+    <div class="container">
+      <h2 class="section__title">全部技巧</h2>
+      <p class="section__subtitle" id="resultInfo">共 110 篇技巧</p>
+      <div class="tips-grid" id="tipsGrid">
+        <a href="articles/xiaomi-wifi-signal-optimization.html" class="tip-card" data-brand="xiaomi" data-category="optimize">
+          <span class="tip-card__brand" style="color:#ff6900">📱 小米</span>
+          <h3 class="tip-card__title">小米路由器WiFi信号差的5个优化方法</h3>
+          <p class="tip-card__desc">信号不满格？教你调整信道、摆放位置和开启穿墙模式，让全屋信号拉满。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/xiaomi-security-checklist.html" class="tip-card" data-brand="xiaomi" data-category="security">
+          <span class="tip-card__brand" style="color:#ff6900">📱 小米</span>
+          <h3 class="tip-card__title">小米路由器安全设置清单</h3>
+          <p class="tip-card__desc">防蹭网、防攻击，8项安全配置让你的家庭网络固若金汤。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/xiaomi-troubleshooting-guide.html" class="tip-card" data-brand="xiaomi" data-category="troubleshoot">
+          <span class="tip-card__brand" style="color:#ff6900">📱 小米</span>
+          <h3 class="tip-card__title">小米路由器常见故障速查</h3>
+          <p class="tip-card__desc">红灯闪烁、频繁掉线、无法上网？一篇文章解决所有常见问题。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔧 故障排查</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/xiaomi-ssh-openwrt-tutorial.html" class="tip-card" data-brand="xiaomi" data-category="advanced">
+          <span class="tip-card__brand" style="color:#ff6900">📱 小米</span>
+          <h3 class="tip-card__title">小米路由器开启SSH/刷OpenWrt教程</h3>
+          <p class="tip-card__desc">解锁路由器的全部潜力：开启SSH、安装插件、刷入OpenWrt系统的完整流程。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/huawei-mesh-networking-guide.html" class="tip-card" data-brand="huawei" data-category="mesh">
+          <span class="tip-card__brand" style="color:#cf0a2c">🔴 华为</span>
+          <h3 class="tip-card__title">华为凌霄子母路由Mesh组网实战</h3>
+          <p class="tip-card__desc">Q6/Q6E电力线版和无线版如何实现全屋无缝漫游，大户型组网最佳实践。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🏠 Mesh组网</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/huawei-parental-controls.html" class="tip-card" data-brand="huawei" data-category="optimize">
+          <span class="tip-card__brand" style="color:#cf0a2c">🔴 华为</span>
+          <h3 class="tip-card__title">华为路由器「儿童上网保护」使用指南</h3>
+          <p class="tip-card__desc">控制孩子的上网时间、过滤不良内容、查看访问记录，家长的数字化管理利器。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-ddns-remote-access.html" class="tip-card" data-brand="tplink" data-category="advanced">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK DDNS远程访问设置教程</h3>
+          <p class="tip-card__desc">使用TP-LINK自带的DDNS服务，实现外网远程管理路由器和访问家中NAS。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/tplink-anti-wifi-theft.html" class="tip-card" data-brand="tplink" data-category="security">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">防范邻居蹭网：TP-LINK防蹭网全策略</h3>
+          <p class="tip-card__desc">发现并阻止蹭网设备，设置MAC白名单，让你的WiFi只有家人能用。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/asus-merlin-firmware-guide.html" class="tip-card" data-brand="asus" data-category="advanced">
+          <span class="tip-card__brand" style="color:#0071e3">⚡ 华硕</span>
+          <h3 class="tip-card__title">刷入梅林固件(Asuswrt-Merlin)完整教程</h3>
+          <p class="tip-card__desc">解锁华硕路由器的更多功能：科学上网、去广告、自定义脚本，梅林固件刷入指南。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/asus-qos-gaming-optimization.html" class="tip-card" data-brand="asus" data-category="optimize">
+          <span class="tip-card__brand" style="color:#0071e3">⚡ 华硕</span>
+          <h3 class="tip-card__title">华硕路由器QoS优化：游戏/视频优先</h3>
+          <p class="tip-card__desc">Adaptive QoS配置指南，保证打游戏不卡、看视频不缓冲，合理分配家庭带宽。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/netgear-wifi-disconnection-fix.html" class="tip-card" data-brand="netgear" data-category="troubleshoot">
+          <span class="tip-card__brand" style="color:#6441a5">🌐 网件</span>
+          <h3 class="tip-card__title">网件路由器WiFi频繁断流排查手册</h3>
+          <p class="tip-card__desc">Orbi/Nighthawk系列断流的常见原因和解决方法，涵盖固件、干扰和设备兼容性。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔧 故障排查</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tenda-mesh-optimization.html" class="tip-card" data-brand="tenda" data-category="optimize">
+          <span class="tip-card__brand" style="color:#e67e22">🔶 腾达</span>
+          <h3 class="tip-card__title">腾达Mesh系统信号优化技巧</h3>
+          <p class="tip-card__desc">MW/Nova系列Mesh组网后信号仍不理想？调整节点位置和设置的终极方案。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/ruijie-acl-security-policy.html" class="tip-card" data-brand="ruijie" data-category="security">
+          <span class="tip-card__brand" style="color:#27ae60">🟢 锐捷</span>
+          <h3 class="tip-card__title">锐捷路由器ACL和企业级安全策略</h3>
+          <p class="tip-card__desc">利用锐捷的访问控制列表(ACL)功能，实现精细化网络访问控制。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/wifi-6-vs-5-vs-7-comparison.html" class="tip-card" data-brand="general" data-category="optimize">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">WiFi 6 vs WiFi 5 vs WiFi 7：到底该选哪个？</h3>
+          <p class="tip-card__desc">从技术参数到实际体验，帮你理清WiFi各代差异，选对不选贵。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/router-buying-guide.html" class="tip-card" data-brand="general" data-category="troubleshoot">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">全品牌通用：路由器选购避坑指南</h3>
+          <p class="tip-card__desc">从需求分析到参数解读，看完不再被商家忽悠，买到最适合自己的路由器。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔧 故障排查</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/router-security-ultimate-guide.html" class="tip-card" data-brand="general" data-category="security">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">路由器安全终极指南：防黑客防监听</h3>
+          <p class="tip-card__desc">DNS劫持、中间人攻击、僵尸网络...你的路由器可能已经被黑了。这些安全措施每个家庭都该做。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/soft-router-getting-started.html" class="tip-card" data-brand="general" data-category="advanced">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">软路由入门：从零到All-in-One</h3>
+          <p class="tip-card__desc">什么是软路由？和硬路由有什么区别？如何搭建一台软路由实现全屋去广告+科学上网。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/wifi-mesh-solutions-comparison.html" class="tip-card" data-brand="general" data-category="mesh">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">各种WiFi Mesh方案大横评</h3>
+          <p class="tip-card__desc">电力猫、无线Mesh、有线Mesh到底哪个好？AC+AP和Mesh怎么选？一次讲清。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🏠 Mesh组网</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/port-forwarding-complete-guide.html" class="tip-card" data-brand="general" data-category="advanced">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">端口转发完全攻略：从原理到实战的每个细节</h3>
+          <p class="tip-card__desc">零基础学端口转发：用「公寓楼门牌号」理解原理，手把手完成NAS远程访问、监控查看和游戏服务器搭建。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/ddns-dynamic-dns-guide.html" class="tip-card" data-brand="general" data-category="advanced">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">DDNS动态域名：让你的家庭网络拥有一个"永久门牌号"</h3>
+          <p class="tip-card__desc">公网IP老是在变？DDNS给你一个固定域名 forever 指向家里。3种方案、5大服务商对比、SSL证书加持全流程。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/home-vpn-wireguard-setup.html" class="tip-card" data-brand="general" data-category="security">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">家庭VPN搭建实战：WireGuard让你随时随地"回家"</h3>
+          <p class="tip-card__desc">在路由器或NAS上部署WireGuard VPN，出差在外一键连回家里，安全访问NAS、监控、打印机——所有设备如同在家。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/parental-control-router-guide.html" class="tip-card" data-brand="general" data-category="security">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">家长控制：用路由器管理孩子的屏幕时间</h3>
+          <p class="tip-card__desc">技术控制是手段，培养习惯是目标。全面掌握各品牌路由器的家长控制，制定分龄上网策略。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/guest-wifi-setup-guide.html" class="tip-card" data-brand="general" data-category="security">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">访客网络(Guest WiFi)：保护隐私的家门第二道锁</h3>
+          <p class="tip-card__desc">客人来了连WiFi怕泄露NAS里的隐私？访客网络自动隔离内网，还能给IoT设备一个安全的专属网络。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🔒 安全防护</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/qos-bandwidth-management.html" class="tip-card" data-brand="general" data-category="optimize">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">QoS带宽管理：让家里每个人都不卡的科学</h3>
+          <p class="tip-card__desc">有人下载全家卡？QoS智能分配带宽，让游戏不卡、视频不缓冲、下载不影响别人——流量管理的终极方案。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/dhcp-complete-guide.html" class="tip-card" data-brand="general" data-category="advanced">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">DHCP完全掌控：IP分配、固定绑定、冲突排查</h3>
+          <p class="tip-card__desc">IP地址怎么分的？如何给NAS/打印机绑固定IP？多台路由器怎么不冲突？一文搞懂DHCP的一切。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/dns-configuration-guide.html" class="tip-card" data-brand="general" data-category="optimize">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">DNS设置全攻略：网页秒开的关键诀窍</h3>
+          <p class="tip-card__desc">DNS不只是"翻译器"，选对DNS网页秒开、防劫持、过滤广告。最被低估的网络优化项，看完从此告别"网页白屏等半天"。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/2-4ghz-vs-5ghz-guide.html" class="tip-card" data-brand="general" data-category="optimize">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">2.4GHz vs 5GHz：双频管理的所有学问</h3>
+          <p class="tip-card__desc">双频合一是坑还是宝？2.4GHz和5GHz各有什么优劣？三SSID方案让每个设备自动连最佳频段。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🚀 性能优化</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/ipv6-dual-stack-setup.html" class="tip-card" data-brand="general" data-category="advanced">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">IPv6从零到双栈运行：每个设备都有公网IP</h3>
+          <p class="tip-card__desc">IPv4地址枯竭、公网IP难申请？开启IPv6让家里每个设备都有公网地址，BT满速、游戏NAT开放。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/dmz-upnp-nat-gaming.html" class="tip-card" data-brand="general" data-category="advanced">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">DMZ、UPnP和NAT类型：联机游戏的通关密码</h3>
+          <p class="tip-card__desc">Switch显示NAT类型D？PS5派对语音失败？Xbox无法联机？掌握UPnP、DMZ和端口转发让游戏畅通无阻。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🧠 高级玩法</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-unboxing-know-your-router.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK路由器开箱与认识你的路由器</h3>
+          <p class="tip-card__desc">新买到TP-LINK路由器，先认识路由器上的每个接口、按钮和指示灯的作用。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-first-setup-internet.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK首次设置与联网教程</h3>
+          <p class="tip-card__desc">从插电到上网，TP-LINK路由器完整首次设置流程，手机APP和网页后台两种方式。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-web-admin-setup.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK网页管理后台登录与基础设置</h3>
+          <p class="tip-card__desc">详解tplogin.cn管理后台的登录、界面布局和基础设置选项。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-web-admin-complete-guide.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK管理后台完全指南</h3>
+          <p class="tip-card__desc">深入掌握TP-LINK管理后台每个菜单的功能，从初级到高级一站式了解。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-wifi-name-password-setup.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK WiFi名称和密码设置全攻略</h3>
+          <p class="tip-card__desc">如何设置安全好记的WiFi名称和密码，2.4G/5G分别命名技巧，加密方式选择。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-2-4g-vs-5g-usage.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK双频WiFi正确使用：2.4G vs 5G</h3>
+          <p class="tip-card__desc">2.4GHz和5GHz WiFi各有什么优缺点？什么场景用哪个频段？双频合一该不该开？</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-smart-connect-guide.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK Smart Connect（智能连接）使用指南</h3>
+          <p class="tip-card__desc">Smart Connect功能详解：如何让设备自动选择最佳频段，提升WiFi体验。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-guest-network-setup.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK访客网络设置教程</h3>
+          <p class="tip-card__desc">开启访客网络，让客人上网不接触你的主网络，保护隐私和安全。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-security-complete-guide.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK安全设置完全指南</h3>
+          <p class="tip-card__desc">防火墙、防蹭网、访问控制、ARP防护...全方位保护你的TP-LINK路由器安全。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-parental-controls.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK家长控制功能详解</h3>
+          <p class="tip-card__desc">设置上网时间限制、网站过滤，保护孩子健康上网。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-qos-bandwidth-optimization.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK QoS带宽管理优化教程</h3>
+          <p class="tip-card__desc">合理分配带宽，游戏不卡、视频不缓冲，让每个设备都获得合适的网速。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-firmware-upgrade-guide.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK固件升级完整教程</h3>
+          <p class="tip-card__desc">为什么需要升级固件？如何安全升级？升级失败怎么办？全攻略来了。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/tplink-wifi-signal-optimization.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK WiFi信号优化终极指南</h3>
+          <p class="tip-card__desc">路由器摆放、信道选择、天线调整、功率设置，全方位提升WiFi信号覆盖。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-mesh-easy-mesh-setup.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK EasyMesh组网教程</h3>
+          <p class="tip-card__desc">单台路由器覆盖不全？用TP-LINK EasyMesh多台组网实现全屋WiFi无死角。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--advanced">高级</span>
+          </div>
+        </a>
+        <a href="articles/tplink-device-management-mac-filter.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK设备管理与MAC过滤详解</h3>
+          <p class="tip-card__desc">查看和管理已连接的设备，识别陌生设备，用MAC过滤防止蹭网。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/tplink-restart-vs-reset.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK重启vs重置：90%的人都搞混</h3>
+          <p class="tip-card__desc">重启和重置有什么区别？什么情况该重启？什么情况该重置？正确操作图解。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/router-buying-complete-guide.html" class="tip-card" data-brand="general" data-category="buying">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">路由器选购全攻略：从入门到旗舰怎么选？</h3>
+          <p class="tip-card__desc">面对琳琅满目的路由器不知道怎么选？从需求分析到参数对比，看完这篇你就能自己做决定了。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🛒 选购指南</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/router-buying-by-house-type.html" class="tip-card" data-brand="general" data-category="buying">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">不同户型路由器选购指南（小户型/大平层/复式/别墅）</h3>
+          <p class="tip-card__desc">你家多大面积？不同户型的路由器方案完全不同。一张表看懂什么户型该配什么设备。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🛒 选购指南</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/soft-router-vs-hard-router.html" class="tip-card" data-brand="general" data-category="buying">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">软路由 vs 硬路由：哪种更适合你？</h3>
+          <p class="tip-card__desc">软路由是什么？和普通路由器有什么区别？哪些人需要软路由？一次性讲清楚。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🛒 选购指南</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+        <a href="articles/router-buying-by-budget.html" class="tip-card" data-brand="general" data-category="buying">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">不同预算路由器推荐（100-1000元+全价位）</h3>
+          <p class="tip-card__desc">每个价位该买什么路由器？从100元入门到2000元旗舰，全价位段选购指南。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🛒 选购指南</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+        <a href="articles/gaming-router-buying-guide.html" class="tip-card" data-brand="general" data-category="buying">
+          <span class="tip-card__brand" style="color:#6366f1">🛜 通用技巧</span>
+          <h3 class="tip-card__title">游戏路由器选购指南：低延迟才是王道</h3>
+          <p class="tip-card__desc">打游戏选什么路由器？QoS加速、游戏端口优先级、降低ping值才是关键。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🛒 选购指南</span>
+            <span class="tip-card__level tip-card__level--intermediate">进阶</span>
+          </div>
+        </a>
+      </div>
+      <div class="tips-empty" id="tipsEmpty" style="display:none;">
+        <span class="tips-empty__icon">📭</span>
+        <p>没有找到匹配的技巧，试试换个关键词？</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google 广告位：技巧列表下方横幅 -->
+  <div class="ad-container ad-container--banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 路由器技巧站 — 让每个人都能用好自己的路由器</p>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

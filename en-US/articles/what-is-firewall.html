@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是防火墙？—— 你家网络的"保安系统" — Router Tips Station</title>
+  <meta name="description" content="路由器自带防火墙吗？它能防什么？黑客真的会攻击我家网络吗？用最通俗的话讲清楚。">
+  <meta property="og:title" content="什么是防火墙？—— 你家网络的"保安系统" — Router Tips Station">
+  <meta property="og:description" content="路由器自带防火墙吗？它能防什么？黑客真的会攻击我家网络吗？用最通俗的话讲清楚。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/what-is-firewall.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/what-is-firewall.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/what-is-firewall.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/what-is-firewall.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/what-is-firewall.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是防火墙？—— 你家网络的\"保安系统\"",
+  "description": "路由器自带防火墙吗？它能防什么？黑客真的会攻击我家网络吗？用最通俗的话讲清楚。",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "General Tips",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Basic Concepts",
+        "item": "https://router-tips.example.com/en-US/index.html?category=basics"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "什么是防火墙？—— 你家网络的\"保安系统\""
+      }
+    ]
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是防火墙？—— 你家网络的\"保安系统\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "### 一句话理解防火墙 场景：防火墙 = 你小区的保安岗亭 你住的小区门口有个保安（防火墙），他的工作很简单： - 你出门（发数据出去）——不管，随便出 - 你回来（数据进来）——检查：是你自己买的菜（你主动请求的网页）→放行；陌生人扛着箱子往你家走（未经请求的外部数据）→拦住，问清楚 路由器自带的防火墙就是这样的\"保安\"——外面主动想进你家网络的数据基本都被挡了。 ### 路由器防火墙能防什么？ 真实案例——为什么你不怕被黑客攻击？ 很多人担心：\"我家网络会不会被黑客攻击？\" 其实NAT本身就是一道天然防火墙： - 你家的内网IP（192.168.x.x）在公网上根本不存在 - 黑客扫描全球IP，看到你家公网IP → 尝试攻击 → 数据到了路由器 - 路由器一看：这是外面主动来的，而且没对应任何内网请求 → 直接丢弃 就像小偷偷了一串钥匙，跑到你家小区门口，发现每一栋楼的房间号都是用代号（内网IP）——他根本不知道哪把钥匙开哪个门。 ### SPI防火墙 vs 普通防火墙 | 类型 | 原理 | 安全性 | |------|------|--------| | NAT（基础防护） ..."
+      }
+    }
+  ]
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/what-is-firewall.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=general">General Tips</a></li>
+    <li><a href="../index.html?category=basics">Basic Concepts</a></li>
+    <li aria-current="page">什么是防火墙？—— 你家网络的"保安系统"</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 General Tips
+          </span>
+        </div>
+        <h1 class="article-header__title">什么是防火墙？—— 你家网络的"保安系统"</h1>
+        <p class="article-header__summary">路由器自带防火墙吗？它能防什么？黑客真的会攻击我家网络吗？用最通俗的话讲清楚。</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=basics" class="article-meta-bar__category">📖 Basic Concepts</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">Beginner</span>
+        <span class="article-meta-bar__brand">🛜 General Tips</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%90%86%E8%A7%A3%E9%98%B2%E7%81%AB%E5%A2%99">1. 一句话理解防火墙</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E9%98%B2%E7%81%AB%E5%A2%99%E8%83%BD%E9%98%B2%E4%BB%80%E4%B9%88%EF%BC%9F">2. 路由器防火墙能防什么？</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#SPI%E9%98%B2%E7%81%AB%E5%A2%99%20vs%20%E6%99%AE%E9%80%9A%E9%98%B2%E7%81%AB%E5%A2%99">3. SPI防火墙 vs 普通防火墙</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E9%98%B2%E7%81%AB%E5%A2%99%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E8%B0%83%E6%95%B4%EF%BC%9F">4. 防火墙什么时候需要调整？</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="一句话理解防火墙">一句话理解防火墙</h3>
+
+<div class="scenario-box">
+<strong>场景：防火墙 = 你小区的保安岗亭</strong>
+
+<p>你住的小区门口有个保安（防火墙），他的工作很简单：</p>
+<ul><li>你出门（发数据出去）——不管，随便出</li>
+<li>你回来（数据进来）——检查：是你自己买的菜（你主动请求的网页）→放行；陌生人扛着箱子往你家走（未经请求的外部数据）→拦住，问清楚</li>
+</ul>
+<p>路由器自带的防火墙就是这样的"保安"——外面主动想进你家网络的数据基本都被挡了。</p>
+</div>
+
+<h3 id="路由器防火墙能防什么？">路由器防火墙能防什么？</h3>
+
+<div class="example-box">
+<strong>真实案例——为什么你不怕被黑客攻击？</strong>
+
+<p>很多人担心："我家网络会不会被黑客攻击？"</p>
+
+<p>其实NAT本身就是一道天然防火墙：</p>
+<ul><li>你家的内网IP（192.168.x.x）在公网上<strong>根本不存在</strong></li>
+<li>黑客扫描全球IP，看到你家公网IP → 尝试攻击 → 数据到了路由器</li>
+<li>路由器一看：这是外面主动来的，而且没对应任何内网请求 → 直接丢弃</li>
+</ul>
+<p>就像小偷偷了一串钥匙，跑到你家小区门口，发现每一栋楼的房间号都是用代号（内网IP）——他根本不知道哪把钥匙开哪个门。</p>
+</div>
+
+<h3 id="SPI防火墙 vs 普通防火墙">SPI防火墙 vs 普通防火墙</h3>
+
+<div class="table-wrapper"><table class="article-table"><tr><th>类型</th><th>原理</th><th>安全性</th></tr><tr><td>------</td><td>------</td><td>--------</td></tr><tr><td>NAT（基础防护）</td><td>外网找内网，没有对应记录就丢弃</td><td>基础，够用</td></tr><tr><td>SPI（状态包检测）</td><td>智能分析每个数据包，不只是看地址</td><td>较强，现在路由器标配</td></tr><tr><td>深度包检测</td><td>检查数据包内容，识别攻击特征</td><td>极强，企业级路由器才有</td></tr></table></div>
+<p>99%的家用路由器都内置了SPI防火墙，默认开启。你不需要做任何设置。</p>
+
+<h3 id="防火墙什么时候需要调整？">防火墙什么时候需要调整？</h3>
+
+<pre class="article-pre"><code>默认：所有外部主动访问一律拦截 ✅
+
+需要"开一道门"的场景：
+<ul><li>端口转发 → 在防火墙上开一个指定的小门</li>
+<li>DMZ → 给一台设备开个"VIP通道"</li>
+<li>远程管理路由器 → 极其不推荐，真要开加IP白名单</li>
+</ul>
+重要原则：
+只开你真正需要且了解的端口！
+不要图省事把DMZ或全部端口都打开！
+</code></pre>
+
+<div class="tip-highlight">
+<p>🛡️ <strong>核心记忆：</strong> 路由器的NAT+SPI防火墙已经能挡住99%的外部攻击，你不需要额外做什么。不在路由器后台乱开端口、不乱关防火墙、保持固件更新，就已经比90%的用户更安全了。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#防火墙</span><span class="article-tag">#安全</span><span class="article-tag">#防攻击</span><span class="article-tag">#SPI</span><span class="article-tag">#基础概念</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="what-is-a-router.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">什么是路由器？—— 你家的"网络交通指挥中心"</span></a>
+  <a href="what-is-wifi-channel.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">什么是WiFi信道？—— 避免"信号打架"的秘密</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="what-is-ip-address.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是IP地址？—— 互联网世界的"家庭住址"</span>
+      <span class="article-related__desc">192.168.1.1是什么？公网IP和内网IP有什么区别？用寄快递的比喻让你彻底搞懂IP地址。</span>
+    </a>
+    
+    <a href="what-is-bandwidth-mbps.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是带宽和Mbps？—— 你家网速的"水管"</span>
+      <span class="article-related__desc">100M宽带为什么下载只有10MB/s？Mbps和MB/s到底什么关系？用水管粗细的比喻让你秒懂。</span>
+    </a>
+    
+    <a href="what-is-wifi.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是WiFi？—— 你身边看不见的"无线电波"</span>
+      <span class="article-related__desc">WiFi到底是什么？2.4G和5G有什么区别？WiFi 5/6/7又是什么？用最通俗的话讲清楚。</span>
+    </a>
+    
+    <a href="what-is-nat.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是NAT？—— 内网和外网的"翻译官"</span>
+      <span class="article-related__desc">为什么你家多台设备共用一个公网IP还能正常上网？NAT是怎么工作的？用公寓楼门禁的比喻彻底搞懂。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

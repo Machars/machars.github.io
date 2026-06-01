@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？ — Router Tips Station</title>
+  <meta name="description" content="两根宽带插一个路由器能叠加网速吗？多WAN到底是什么原理？和负载均衡的区别。">
+  <meta property="og:title" content="什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？ — Router Tips Station">
+  <meta property="og:description" content="两根宽带插一个路由器能叠加网速吗？多WAN到底是什么原理？和负载均衡的区别。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/dual-wan-multi-wan-guide.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/dual-wan-multi-wan-guide.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/dual-wan-multi-wan-guide.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/dual-wan-multi-wan-guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/dual-wan-multi-wan-guide.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？",
+  "description": "两根宽带插一个路由器能叠加网速吗？多WAN到底是什么原理？和负载均衡的区别。",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "General Tips",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Basic Concepts",
+        "item": "https://router-tips.example.com/en-US/index.html?category=basics"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？"
+      }
+    ]
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "### 多WAN ≠ 速度翻倍 场景：多WAN = 多开了一个出城收费站 你有两条宽带：电信300M + 联通200M，插到一个双WAN路由器上。 很多人以为：300+200=500M，下载速度翻倍？ 真相：你下载一个文件时，只能走一条路（一个WAN口）。就像一个快递不能分两半走两条路。所以单个下载任务不会更快。 但双WAN的真正好处是：A任务走电信、B任务走联通——多任务时总带宽增加。 ### 多WAN的真实价值 ✅ 有用场景： - 多台设备同时下载/看视频 → 自动分流，总带宽利用率高 - 一条宽带挂了 → 自动切换到另一条（故障备份） - 指定游戏走电信（低延迟）、BT下载走联通 - 家庭和小型办公室多用户并发场景 ❌ 不适用场景： - 单设备追求极限下载速度 → 1+1≠2 - 运营商聚合（需要运营商配合，几乎不可能家用） ### 双WAN设置要点 华硕(双WAN)：WAN设置 → 双WAN → 开启 → 指定第二WAN口 TP-LINK(多WAN)：高级设置 → 多WAN → 添加WAN口 软路由(OpenWrt)：mwan3插件实现策略路由和负载均衡 常见策略： - 故障转..."
+      }
+    }
+  ]
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/dual-wan-multi-wan-guide.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=general">General Tips</a></li>
+    <li><a href="../index.html?category=basics">Basic Concepts</a></li>
+    <li aria-current="page">什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 General Tips
+          </span>
+        </div>
+        <h1 class="article-header__title">什么是双WAN/多WAN？—— 两条宽带聚合真能翻倍吗？</h1>
+        <p class="article-header__summary">两根宽带插一个路由器能叠加网速吗？多WAN到底是什么原理？和负载均衡的区别。</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=basics" class="article-meta-bar__category">📖 Basic Concepts</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">Beginner</span>
+        <span class="article-meta-bar__brand">🛜 General Tips</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%A4%9AWAN%20%E2%89%A0%20%E9%80%9F%E5%BA%A6%E7%BF%BB%E5%80%8D">1. 多WAN ≠ 速度翻倍</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%A4%9AWAN%E7%9A%84%E7%9C%9F%E5%AE%9E%E4%BB%B7%E5%80%BC">2. 多WAN的真实价值</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%8F%8CWAN%E8%AE%BE%E7%BD%AE%E8%A6%81%E7%82%B9">3. 双WAN设置要点</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="多WAN ≠ 速度翻倍">多WAN ≠ 速度翻倍</h3>
+
+<div class="scenario-box">
+<strong>场景：多WAN = 多开了一个出城收费站</strong>
+
+<p>你有两条宽带：电信300M + 联通200M，插到一个双WAN路由器上。</p>
+
+<p>很多人以为：300+200=500M，下载速度翻倍？</p>
+
+<p>真相：你下载一个文件时，只能走一条路（一个WAN口）。就像一个快递不能分两半走两条路。所以<strong>单个下载任务不会更快</strong>。</p>
+
+<p>但双WAN的真正好处是：A任务走电信、B任务走联通——<strong>多任务时总带宽增加</strong>。</p>
+</div>
+
+<h3 id="多WAN的真实价值">多WAN的真实价值</h3>
+
+<pre class="article-pre"><code>✅ 有用场景：
+<ul><li>多台设备同时下载/看视频 → 自动分流，总带宽利用率高</li>
+<li>一条宽带挂了 → 自动切换到另一条（故障备份）</li>
+<li>指定游戏走电信（低延迟）、BT下载走联通</li>
+<li>家庭和小型办公室多用户并发场景</li>
+</ul>
+❌ 不适用场景：
+<ul><li>单设备追求极限下载速度 → 1+1≠2</li>
+<li>运营商聚合（需要运营商配合，几乎不可能家用）</li>
+</ul></code></pre>
+
+<h3 id="双WAN设置要点">双WAN设置要点</h3>
+
+<pre class="article-pre"><code>华硕(双WAN)：WAN设置 → 双WAN → 开启 → 指定第二WAN口
+TP-LINK(多WAN)：高级设置 → 多WAN → 添加WAN口
+软路由(OpenWrt)：mwan3插件实现策略路由和负载均衡
+
+常见策略：
+<ul><li>故障转移：平时只用电信，电信断了自动切联通</li>
+<li>负载均衡：根据源IP/目标IP/端口自动分流</li>
+<li>策略路由：游戏走电信、视频走联通</li>
+</ul></code></pre>
+
+<div class="tip-highlight">
+<p>🛣️ <strong>核心记忆：</strong> 双WAN让数据"各走各路"，多任务总带宽增加但单任务不会翻倍。最大价值是故障备份和分流管理。软路由配合mwan3能实现最灵活的多WAN策略。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#双WAN</span><span class="article-tag">#多WAN</span><span class="article-tag">#带宽叠加</span><span class="article-tag">#负载均衡</span><span class="article-tag">#基础概念</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="doh-dot-secure-dns.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">什么是DoH/DoT安全DNS？—— 给DNS查询穿上"隐身衣"</span></a>
+  <a href="what-is-vlan.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">什么是VLAN？—— 把一个路由器"切成"多个独立网络</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="what-is-ip-address.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是IP地址？—— 互联网世界的"家庭住址"</span>
+      <span class="article-related__desc">192.168.1.1是什么？公网IP和内网IP有什么区别？用寄快递的比喻让你彻底搞懂IP地址。</span>
+    </a>
+    
+    <a href="what-is-bandwidth-mbps.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是带宽和Mbps？—— 你家网速的"水管"</span>
+      <span class="article-related__desc">100M宽带为什么下载只有10MB/s？Mbps和MB/s到底什么关系？用水管粗细的比喻让你秒懂。</span>
+    </a>
+    
+    <a href="what-is-wifi.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是WiFi？—— 你身边看不见的"无线电波"</span>
+      <span class="article-related__desc">WiFi到底是什么？2.4G和5G有什么区别？WiFi 5/6/7又是什么？用最通俗的话讲清楚。</span>
+    </a>
+    
+    <a href="what-is-nat.html" class="article-related__card">
+      <span class="article-related__category">📖 Basic Concepts</span>
+      <span class="article-related__title">什么是NAT？—— 内网和外网的"翻译官"</span>
+      <span class="article-related__desc">为什么你家多台设备共用一个公网IP还能正常上网？NAT是怎么工作的？用公寓楼门禁的比喻彻底搞懂。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

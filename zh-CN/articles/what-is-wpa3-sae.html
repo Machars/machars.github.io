@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了 — 路由器技巧站</title>
+  <meta name="description" content="WPA3和WPA2的核心区别在哪？SAE握手协议如何防破解？为什么过渡期要选WPA2/WPA3混合？">
+  <meta property="og:title" content="什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了 — 路由器技巧站">
+  <meta property="og:description" content="WPA3和WPA2的核心区别在哪？SAE握手协议如何防破解？为什么过渡期要选WPA2/WPA3混合？">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/zh-CN/articles/what-is-wpa3-sae.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/zh-CN/articles/what-is-wpa3-sae.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/what-is-wpa3-sae.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/what-is-wpa3-sae.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/what-is-wpa3-sae.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了",
+  "description": "WPA3和WPA2的核心区别在哪？SAE握手协议如何防破解？为什么过渡期要选WPA2/WPA3混合？",
+  "author": {
+    "@type": "Organization",
+    "name": "路由器技巧站"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://router-tips.example.com/zh-CN/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "通用技巧",
+        "item": "https://router-tips.example.com/zh-CN/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "基础概念",
+        "item": "https://router-tips.example.com/zh-CN/index.html?category=basics"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了"
+      }
+    ]
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "### WPA2的致命弱点 场景：黑客抓走WiFi\"握手包\"后可以离线破解 你手机连WiFi时，和路由器有一个\"握手\"过程（互相确认身份）。 WPA2：黑客在附近抓取这个握手包→拿回家用字典暴力破解→如果密码是\"12345678\"→几秒钟就破解 WPA3-SAE：握手时融入了随机扰动数，黑客抓到的握手包无法离线破解密码。且连续输错密码会被检测到锁定——暴力破解彻底失效。 ### SAE（对等同步认证） WPA2（四次握手）： 密码验证 → 黑客抓包 → 离线字典攻击 → 破解 WPA3（SAE Dragonfly握手）： 密码+随机数混合验证 → 黑客抓包 → 无法逆向解出密码 + 连续输错次数限制 → 在线暴力也被阻断 ### WPA3的过渡问题 所有2020年后的新设备基本都支持WPA3，但家里的老设备（旧智能电视/老手机/老IoT）可能只支持WPA2。 解决：路由器设\"WPA2/WPA3-Personal混合模式\"——新设备用WPA3，老设备用WPA2，兼容兼安全。 🔐 核心记忆： WPA3-SAE让WiFi密码无法被离线暴力破解。WPA2握手包可被抓取破解（弱密码不安全）。推..."
+      }
+    }
+  ]
+}</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>路由器技巧站</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../en-US/articles/what-is-wpa3-sae.html" class="nav__lang-link" aria-label="切换为英文">🌐 English</a>
+        </div>
+        <a href="../index.html" class="nav__back">← 返回首页</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="../index.html?brand=general">通用技巧</a></li>
+    <li><a href="../index.html?category=basics">基础概念</a></li>
+    <li aria-current="page">什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 通用技巧
+          </span>
+        </div>
+        <h1 class="article-header__title">什么是WPA3-SAE？—— WiFi密码再也不会被暴力破解了</h1>
+        <p class="article-header__summary">WPA3和WPA2的核心区别在哪？SAE握手协议如何防破解？为什么过渡期要选WPA2/WPA3混合？</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=basics" class="article-meta-bar__category">📖 基础概念</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">入门</span>
+        <span class="article-meta-bar__brand">🛜 通用技巧</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 目录</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#WPA2%E7%9A%84%E8%87%B4%E5%91%BD%E5%BC%B1%E7%82%B9">1. WPA2的致命弱点</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#SAE%EF%BC%88%E5%AF%B9%E7%AD%89%E5%90%8C%E6%AD%A5%E8%AE%A4%E8%AF%81%EF%BC%89">2. SAE（对等同步认证）</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#WPA3%E7%9A%84%E8%BF%87%E6%B8%A1%E9%97%AE%E9%A2%98">3. WPA3的过渡问题</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="WPA2的致命弱点">WPA2的致命弱点</h3>
+
+<div class="scenario-box">
+<strong>场景：黑客抓走WiFi"握手包"后可以离线破解</strong>
+
+<p>你手机连WiFi时，和路由器有一个"握手"过程（互相确认身份）。</p>
+
+<p>WPA2：黑客在附近抓取这个握手包→拿回家用字典暴力破解→如果密码是"12345678"→几秒钟就破解</p>
+
+<p>WPA3-SAE：握手时融入了随机扰动数，黑客抓到的握手包无法离线破解密码。且连续输错密码会被检测到锁定——暴力破解彻底失效。</p>
+</div>
+
+<h3 id="SAE（对等同步认证）">SAE（对等同步认证）</h3>
+
+<pre class="article-pre"><code>WPA2（四次握手）：
+密码验证 → 黑客抓包 → 离线字典攻击 → 破解
+
+WPA3（SAE Dragonfly握手）：
+密码+随机数混合验证 → 黑客抓包 → 无法逆向解出密码
++ 连续输错次数限制 → 在线暴力也被阻断
+</code></pre>
+
+<h3 id="WPA3的过渡问题">WPA3的过渡问题</h3>
+
+<p>所有2020年后的新设备基本都支持WPA3，但家里的老设备（旧智能电视/老手机/老IoT）可能只支持WPA2。</p>
+
+<p>解决：路由器设"WPA2/WPA3-Personal混合模式"——新设备用WPA3，老设备用WPA2，兼容兼安全。</p>
+
+<div class="tip-highlight">
+<p>🔐 <strong>核心记忆：</strong> WPA3-SAE让WiFi密码无法被离线暴力破解。WPA2握手包可被抓取破解（弱密码不安全）。推荐设WPA2/WPA3混合模式过渡，等所有设备支持后切纯WPA3。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#WPA3</span><span class="article-tag">#SAE</span><span class="article-tag">#安全</span><span class="article-tag">#加密</span><span class="article-tag">#基础概念</span></div>
+
+      
+<nav class="article-prevnext" aria-label="上下篇导航">
+  <a href="802-11k-v-r-fast-roaming.html" class="article-prevnext__prev"><span class="article-prevnext__label">← 上一篇</span><span class="article-prevnext__title">什么是802.11k/v/r？—— 无缝WiFi漫游三大协议</span></a>
+  <a href="what-is-2-5g-ethernet.html" class="article-prevnext__next"><span class="article-prevnext__label">下一篇 →</span><span class="article-prevnext__title">什么是2.5G网口？—— 千兆之上的"新标准接口"</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 相关推荐</h2>
+  <div class="article-related__grid">
+    
+    <a href="what-is-ip-address.html" class="article-related__card">
+      <span class="article-related__category">📖 基础概念</span>
+      <span class="article-related__title">什么是IP地址？—— 互联网世界的"家庭住址"</span>
+      <span class="article-related__desc">192.168.1.1是什么？公网IP和内网IP有什么区别？用寄快递的比喻让你彻底搞懂IP地址。</span>
+    </a>
+    
+    <a href="what-is-bandwidth-mbps.html" class="article-related__card">
+      <span class="article-related__category">📖 基础概念</span>
+      <span class="article-related__title">什么是带宽和Mbps？—— 你家网速的"水管"</span>
+      <span class="article-related__desc">100M宽带为什么下载只有10MB/s？Mbps和MB/s到底什么关系？用水管粗细的比喻让你秒懂。</span>
+    </a>
+    
+    <a href="what-is-wifi.html" class="article-related__card">
+      <span class="article-related__category">📖 基础概念</span>
+      <span class="article-related__title">什么是WiFi？—— 你身边看不见的"无线电波"</span>
+      <span class="article-related__desc">WiFi到底是什么？2.4G和5G有什么区别？WiFi 5/6/7又是什么？用最通俗的话讲清楚。</span>
+    </a>
+    
+    <a href="what-is-nat.html" class="article-related__card">
+      <span class="article-related__category">📖 基础概念</span>
+      <span class="article-related__title">什么是NAT？—— 内网和外网的"翻译官"</span>
+      <span class="article-related__desc">为什么你家多台设备共用一个公网IP还能正常上网？NAT是怎么工作的？用公寓楼门禁的比喻彻底搞懂。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 路由器技巧站 — 让每个人都能用好自己的路由器</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

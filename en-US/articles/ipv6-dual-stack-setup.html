@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPv6从零到双栈运行：每个设备都有公网IP — Router Tips Station</title>
+  <meta name="description" content="IPv4地址枯竭、公网IP难申请？开启IPv6让家里每个设备都有公网地址，BT满速、游戏NAT开放。">
+  <meta property="og:title" content="IPv6从零到双栈运行：每个设备都有公网IP — Router Tips Station">
+  <meta property="og:description" content="IPv4地址枯竭、公网IP难申请？开启IPv6让家里每个设备都有公网地址，BT满速、游戏NAT开放。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/ipv6-dual-stack-setup.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/ipv6-dual-stack-setup.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/ipv6-dual-stack-setup.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/ipv6-dual-stack-setup.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/ipv6-dual-stack-setup.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "IPv6从零到双栈运行：每个设备都有公网IP",
+  "description": "IPv4地址枯竭、公网IP难申请？开启IPv6让家里每个设备都有公网地址，BT满速、游戏NAT开放。",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "General Tips",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=general"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Advanced",
+        "item": "https://router-tips.example.com/en-US/index.html?category=advanced"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "IPv6从零到双栈运行：每个设备都有公网IP"
+      }
+    ]
+  }
+}</script>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/ipv6-dual-stack-setup.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=general">General Tips</a></li>
+    <li><a href="../index.html?category=advanced">Advanced</a></li>
+    <li aria-current="page">IPv6从零到双栈运行：每个设备都有公网IP</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            🛜 General Tips
+          </span>
+        </div>
+        <h1 class="article-header__title">IPv6从零到双栈运行：每个设备都有公网IP</h1>
+        <p class="article-header__summary">IPv4地址枯竭、公网IP难申请？开启IPv6让家里每个设备都有公网地址，BT满速、游戏NAT开放。</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=advanced" class="article-meta-bar__category">🧠 Advanced</a>
+        <span class="article-meta-bar__level article-meta-bar__level--advanced">Advanced</span>
+        <span class="article-meta-bar__brand">🛜 General Tips</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%80IPv6%EF%BC%9F">1. 为什么要开IPv6？</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%BF%AB%E9%80%9F%E6%A3%80%E6%B5%8B%EF%BC%9A%E4%BD%A0%E7%9A%84IPv6%E5%BC%80%E4%BA%86%E5%90%97%EF%BC%9F">2. 快速检测：你的IPv6开了吗？</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%90%84%E5%93%81%E7%89%8C%E5%BC%80%E5%90%AFIPv6%E9%80%9F%E6%9F%A5">3. 各品牌开启IPv6速查</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E2%9D%97IPv6%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%9A%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E5%AE%89%E5%85%A8%E6%AD%A5%E9%AA%A4">4. ❗IPv6防火墙：最重要的安全步骤</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#IPv6%20%2B%20DDNS">5. IPv6 + DDNS</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E5%8F%8C%E6%A0%88%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89">6. 双栈模式（推荐）</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        
+<h3 id="为什么要开IPv6？">为什么要开IPv6？</h3>
+
+<div class="scenario-box">
+<strong>场景：BT下载为什么慢？</strong>
+
+<p>你有一个PT站的种子，100个人做种。但你的IPv4是CGNAT大内网——70%的做种者你连不上。下载速度只有2MB/s。</p>
+
+<p>开启IPv6后：每个做种者的IPv6地址你都能直连。Peer数量翻倍，下载速度飙升到20MB/s+跑满带宽。</p>
+</div>
+
+<strong>IPv6的核心优势：</strong>
+<ul><li>🌍 每个设备都有公网IP(不需要端口转发！)</li>
+<li>⚡ BT/PT下载满速(NAT不再限制)</li>
+<li>🎮 联机游戏NAT开放</li>
+<li>🔒 端到端加密更易实现</li>
+</ul>
+<h3 id="快速检测：你的IPv6开了吗？">快速检测：你的IPv6开了吗？</h3>
+
+<p>访问 <strong>test-ipv6.com</strong>：</p>
+<ul><li>看到"你的IPv6地址是..." → 已开启 ✅</li>
+<li>看到"你没有IPv6地址" → 需要配置</li>
+</ul>
+<h3 id="各品牌开启IPv6速查">各品牌开启IPv6速查</h3>
+
+<div class="table-wrapper"><table class="article-table"><tr><th>品牌</th><th>位置</th><th>关键设置</th></tr><tr><td>------</td><td>------</td><td>---------</td></tr><tr><td>TP-LINK</td><td>高级设置 → IPv6</td><td>WAN类型选PPPoE，LAN用DHCPv6</td></tr><tr><td>华硕</td><td>高级设置 → IPv6</td><td>连接类型Native，DHCP-PD开启</td></tr><tr><td>小米</td><td>APP/网页 → IPv6</td><td>开启，选PPPoE</td></tr><tr><td>华为</td><td>APP → 网络设置 → IPv6</td><td>开启</td></tr><tr><td>OpenWrt</td><td>安装ip6tables等</td><td>需手动配置</td></tr></table></div>
+<h3 id="❗IPv6防火墙：最重要的安全步骤">❗IPv6防火墙：最重要的安全步骤</h3>
+
+<div class="tip-highlight">
+<p>🚨 <strong>重大差异：</strong> IPv4有NAT天然防火墙(外网进不来)。IPv6每个设备都是公网IP，没有NAT保护。<strong>防火墙必须开！</strong></p>
+</div>
+
+<pre class="article-pre"><code>确认路由器IPv6防火墙：默认入站 = 拒绝(Deny)
+只开放需要对外服务的端口(原理同端口转发但针对IPv6)
+每台设备的系统防火墙也要开启(Windows Defender/群晖防火墙)
+</code></pre>
+
+<h3 id="IPv6 + DDNS">IPv6 + DDNS</h3>
+
+<p>运营商的IPv6前缀可能变化(重拨号后)，所以仍然需要DDNS：</p>
+<pre class="article-pre"><code>DDNS添加AAAA记录(指向IPv6地址)
+访问：http://myhome.tpddns.cn:5000
+→ 自动解析到当前IPv6地址
+</code></pre>
+
+<h3 id="双栈模式（推荐）">双栈模式（推荐）</h3>
+
+<p>IPv4和IPv6同时运行：</p>
+<ul><li>IPv4：处理老网站、不支持IPv6的服务</li>
+<li>IPv6：BT下载、直连、新网站</li>
+</ul>
+<div class="tip-highlight">
+<p>🎯 <strong>一句话：</strong> IPv6是未来。保持双栈运行，IPv4当备胎，IPv6当主力。BT下载和联机游戏的体验提升会让你相见恨晚。</p>
+</div>
+
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#IPv6</span><span class="article-tag">#双栈</span><span class="article-tag">#公网IP</span><span class="article-tag">#BT下载</span><span class="article-tag">#防火墙</span><span class="article-tag">#DDNS</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="2-4ghz-vs-5ghz-guide.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">2.4GHz vs 5GHz：双频管理的所有学问</span></a>
+  <a href="dmz-upnp-nat-gaming.html" class="article-prevnext__next"><span class="article-prevnext__label">Next →</span><span class="article-prevnext__title">DMZ、UPnP和NAT类型：联机游戏的通关密码</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="xiaomi-ssh-openwrt-tutorial.html" class="article-related__card">
+      <span class="article-related__category">🧠 Advanced</span>
+      <span class="article-related__title">小米路由器开启SSH/刷OpenWrt教程</span>
+      <span class="article-related__desc">解锁路由器的全部潜力：开启SSH、安装插件、刷入OpenWrt系统的完整流程。</span>
+    </a>
+    
+    <a href="tplink-ddns-remote-access.html" class="article-related__card">
+      <span class="article-related__category">🧠 Advanced</span>
+      <span class="article-related__title">TP-LINK DDNS远程访问设置教程</span>
+      <span class="article-related__desc">使用TP-LINK自带的DDNS服务，实现外网远程管理路由器和访问家中NAS。</span>
+    </a>
+    
+    <a href="asus-merlin-firmware-guide.html" class="article-related__card">
+      <span class="article-related__category">🧠 Advanced</span>
+      <span class="article-related__title">刷入梅林固件(Asuswrt-Merlin)完整教程</span>
+      <span class="article-related__desc">解锁华硕路由器的更多功能：科学上网、去广告、自定义脚本，梅林固件刷入指南。</span>
+    </a>
+    
+    <a href="soft-router-getting-started.html" class="article-related__card">
+      <span class="article-related__category">🧠 Advanced</span>
+      <span class="article-related__title">软路由入门：从零到All-in-One</span>
+      <span class="article-related__desc">什么是软路由？和硬路由有什么区别？如何搭建一台软路由实现全屋去广告+科学上网。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

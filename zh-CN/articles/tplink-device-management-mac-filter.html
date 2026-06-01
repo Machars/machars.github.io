@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP-LINK设备管理与MAC过滤详解 — 路由器技巧站</title>
+  <meta name="description" content="查看和管理已连接的设备，识别陌生设备，用MAC过滤防止蹭网。">
+  <meta property="og:title" content="TP-LINK设备管理与MAC过滤详解 — 路由器技巧站">
+  <meta property="og:description" content="查看和管理已连接的设备，识别陌生设备，用MAC过滤防止蹭网。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/zh-CN/articles/tplink-device-management-mac-filter.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/zh-CN/articles/tplink-device-management-mac-filter.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/tplink-device-management-mac-filter.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/tplink-device-management-mac-filter.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/tplink-device-management-mac-filter.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TP-LINK设备管理与MAC过滤详解",
+  "description": "查看和管理已连接的设备，识别陌生设备，用MAC过滤防止蹭网。",
+  "author": {
+    "@type": "Organization",
+    "name": "路由器技巧站"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://router-tips.example.com/zh-CN/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "TP-LINK",
+        "item": "https://router-tips.example.com/zh-CN/index.html?brand=tplink"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "以TP-LINK为样板，教你从路由器小白到大神",
+        "item": "https://router-tips.example.com/zh-CN/index.html?category=setup"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "TP-LINK设备管理与MAC过滤详解"
+      }
+    ]
+  }
+}</script>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>路由器技巧站</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../en-US/articles/tplink-device-management-mac-filter.html" class="nav__lang-link" aria-label="切换为英文">🌐 English</a>
+        </div>
+        <a href="../index.html" class="nav__back">← 返回首页</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="../index.html?brand=tplink">TP-LINK</a></li>
+    <li><a href="../index.html?category=setup">以TP-LINK为样板，教你从路由器小白到大神</a></li>
+    <li aria-current="page">TP-LINK设备管理与MAC过滤详解</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#00b04920;color:#00b049">
+            🔷 TP-LINK
+          </span>
+        </div>
+        <h1 class="article-header__title">TP-LINK设备管理与MAC过滤详解</h1>
+        <p class="article-header__summary">查看和管理已连接的设备，识别陌生设备，用MAC过滤防止蹭网。</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=setup" class="article-meta-bar__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</a>
+        <span class="article-meta-bar__level article-meta-bar__level--intermediate">进阶</span>
+        <span class="article-meta-bar__brand">🔷 TP-LINK</span>
+        <time class="article-meta-bar__date" datetime="2026-06-01">2026-06-01</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 目录</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95">1. 查看方法</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E8%AF%86%E5%88%AB%E8%AE%BE%E5%A4%87">2. 识别设备</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E7%99%BD%E5%90%8D%E5%8D%95%E6%A8%A1%E5%BC%8F">3. 白名单模式</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E9%BB%91%E5%90%8D%E5%8D%95%E6%A8%A1%E5%BC%8F">4. 黑名单模式</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A4">5. 设置步骤</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        <h2>一、查看已连接设备</h2>
+
+<h3 id="查看方法">查看方法</h3>
+<ul><li>登录 <code class="article-inline-code">tplogin.cn</code></li>
+<li>设备管理 → 已连接设备</li>
+<li>查看所有在线设备列表</li>
+</ul>
+<h3 id="识别设备">识别设备</h3>
+<ul><li>设备名称（部分设备会显示型号）</li>
+<li>MAC地址</li>
+<li>IP地址</li>
+<li>连接方式（2.4G/5G/有线）</li>
+<li>实时速率</li>
+</ul>
+<p>> 🔍 如果不认识某个设备，记下MAC地址去网上搜索</p>
+
+<h2>二、MAC地址过滤</h2>
+
+<h3 id="白名单模式">白名单模式</h3>
+<ul><li>只允许列表中的设备上网</li>
+<li>最安全，但每次新设备都要添加</li>
+</ul>
+<h3 id="黑名单模式">黑名单模式</h3>
+<ul><li>禁止列表中的设备上网</li>
+<li>适合封禁特定蹭网设备</li>
+</ul>
+<h3 id="设置步骤">设置步骤</h3>
+<ul><li>安全设置 → MAC过滤</li>
+<li>选择模式（白名单/黑名单）</li>
+<li>添加MAC地址</li>
+<li>保存并生效</li>
+</ul>
+<h2>三、定时断网</h2>
+
+<ul><li>可以为指定设备设置上网时间段</li>
+<li>适合控制孩子上网时间</li>
+</ul>
+<h2>四、防蹭网检查清单</h2>
+
+<ul><li>[ ] 查看已连接设备，识别每个设备</li>
+<li>[ ] 发现陌生设备立即拉黑</li>
+<li>[ ] 修改WiFi密码并重新连接</li>
+<li>[ ] 考虑开启MAC白名单</li></ul>
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#TP-LINK</span><span class="article-tag">#设备管理</span><span class="article-tag">#MAC过滤</span></div>
+
+      
+<nav class="article-prevnext" aria-label="上下篇导航">
+  <a href="tplink-mesh-easy-mesh-setup.html" class="article-prevnext__prev"><span class="article-prevnext__label">← 上一篇</span><span class="article-prevnext__title">TP-LINK EasyMesh组网教程</span></a>
+  <a href="tplink-restart-vs-reset.html" class="article-prevnext__next"><span class="article-prevnext__label">下一篇 →</span><span class="article-prevnext__title">TP-LINK重启vs重置：90%的人都搞混</span></a>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 相关推荐</h2>
+  <div class="article-related__grid">
+    
+    <a href="tplink-unboxing-know-your-router.html" class="article-related__card">
+      <span class="article-related__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+      <span class="article-related__title">TP-LINK路由器开箱与认识你的路由器</span>
+      <span class="article-related__desc">新买到TP-LINK路由器，先认识路由器上的每个接口、按钮和指示灯的作用。</span>
+    </a>
+    
+    <a href="tplink-first-setup-internet.html" class="article-related__card">
+      <span class="article-related__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+      <span class="article-related__title">TP-LINK首次设置与联网教程</span>
+      <span class="article-related__desc">从插电到上网，TP-LINK路由器完整首次设置流程，手机APP和网页后台两种方式。</span>
+    </a>
+    
+    <a href="tplink-web-admin-setup.html" class="article-related__card">
+      <span class="article-related__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+      <span class="article-related__title">TP-LINK网页管理后台登录与基础设置</span>
+      <span class="article-related__desc">详解tplogin.cn管理后台的登录、界面布局和基础设置选项。</span>
+    </a>
+    
+    <a href="tplink-web-admin-complete-guide.html" class="article-related__card">
+      <span class="article-related__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+      <span class="article-related__title">TP-LINK管理后台完全指南</span>
+      <span class="article-related__desc">深入掌握TP-LINK管理后台每个菜单的功能，从初级到高级一站式了解。</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 路由器技巧站 — 让每个人都能用好自己的路由器</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>
