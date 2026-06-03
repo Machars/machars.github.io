@@ -488,6 +488,18 @@ button {
   border-top: 1px solid var(--color-border);
 }
 
+.footer__stats {
+  margin-top: 8px;
+  font-size: .8rem;
+  color: var(--color-text-muted);
+  opacity: .8;
+}
+
+.footer__stats-sep {
+  margin: 0 12px;
+  opacity: .4;
+}
+
 /* ===== Google 广告位 ===== */
 .ad-container {
   max-width: var(--max-width);
