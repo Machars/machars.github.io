@@ -4,15 +4,13 @@
 
   const searchInput = document.getElementById('searchInput');
   const searchBtn = document.getElementById('searchBtn');
-  const brandFilter = document.getElementById('brandFilter');
-  const categoryGrid = document.getElementById('categoryGrid');
+  const categorySidebar = document.getElementById('categorySidebar');
   const tipsGrid = document.getElementById('tipsGrid');
   const tipsEmpty = document.getElementById('tipsEmpty');
   const resultInfo = document.getElementById('resultInfo');
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.querySelector('.nav__links');
 
-  let activeBrand = 'all';
   let activeCategory = 'all';
   let searchQuery = '';
 
@@ -20,14 +18,12 @@
     const cards = tipsGrid.querySelectorAll('.tip-card');
     let count = 0;
     cards.forEach(card => {
-      const b = card.dataset.brand;
       const c = card.dataset.category;
       const text = card.textContent.toLowerCase();
       const q = searchQuery.toLowerCase().trim();
-      const matchBrand = activeBrand === 'all' || b === activeBrand;
       const matchCategory = activeCategory === 'all' || c === activeCategory;
       const matchSearch = !q || text.includes(q);
-      const visible = matchBrand && matchCategory && matchSearch;
+      const visible = matchCategory && matchSearch;
       card.style.display = visible ? '' : 'none';
       if (visible) count++;
     });
@@ -38,26 +34,14 @@
     }
   }
 
-  // 品牌筛选
-  if (brandFilter) {
-    brandFilter.addEventListener('click', function(e) {
-      const chip = e.target.closest('.filter-chip');
-      if (!chip) return;
-      activeBrand = chip.dataset.brand;
-      brandFilter.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('filter-chip--active'));
-      chip.classList.add('filter-chip--active');
-      filter();
-    });
-  }
-
-  // 分类筛选
-  if (categoryGrid) {
-    categoryGrid.addEventListener('click', function(e) {
-      const card = e.target.closest('.cat-card');
-      if (!card) return;
-      activeCategory = card.dataset.category;
-      categoryGrid.querySelectorAll('.cat-card').forEach(c => c.classList.remove('cat-card--active'));
-      card.classList.add('cat-card--active');
+  // 分类侧边栏筛选
+  if (categorySidebar) {
+    categorySidebar.addEventListener('click', function(e) {
+      const item = e.target.closest('.sidebar__item');
+      if (!item) return;
+      activeCategory = item.dataset.category;
+      categorySidebar.querySelectorAll('.sidebar__item').forEach(el => el.classList.remove('sidebar__item--active'));
+      item.classList.add('sidebar__item--active');
       filter();
     });
   }

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained — Router Tips Station</title>
+  <meta name="description" content="Confused by PPPoE, Dynamic IP and Static IP when setting up your router? Learn what each mode means, when to use which, and real-world examples.">
+  <meta property="og:title" content="TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained — Router Tips Station">
+  <meta property="og:description" content="Confused by PPPoE, Dynamic IP and Static IP when setting up your router? Learn what each mode means, when to use which, and real-world examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://router-tips.example.com/en-US/articles/tplink-internet-connection-modes.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://router-tips.example.com/en-US/articles/tplink-internet-connection-modes.html">
+  <link rel="alternate" hreflang="en-US" href="https://router-tips.example.com/en-US/articles/tplink-internet-connection-modes.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://router-tips.example.com/zh-CN/articles/tplink-internet-connection-modes.html">
+  <link rel="alternate" hreflang="x-default" href="https://router-tips.example.com/zh-CN/articles/tplink-internet-connection-modes.html">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/article.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained",
+  "description": "Confused by PPPoE, Dynamic IP and Static IP when setting up your router? Learn what each mode means, when to use which, and real-world examples.",
+  "author": {
+    "@type": "Organization",
+    "name": "Router Tips Station"
+  },
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://router-tips.example.com/en-US/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "TP-LINK",
+        "item": "https://router-tips.example.com/en-US/index.html?brand=tplink"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "TP-LINK Tutorial: From Beginner to Expert",
+        "item": "https://router-tips.example.com/en-US/index.html?category=setup"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained"
+      }
+    ]
+  }
+}</script>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-icon">📶</span>
+        <span>Router Tips Station</span>
+      </a>
+      <div class="nav__article-actions">
+        <div class="nav__lang-switch">
+          <a href="../../zh-CN/articles/tplink-internet-connection-modes.html" class="nav__lang-link" aria-label="Switch to Chinese">🌐 中文</a>
+        </div>
+        <a href="../index.html" class="nav__back">← Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-container">
+      
+<nav class="article-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html?brand=tplink">TP-LINK</a></li>
+    <li><a href="../index.html?category=setup">TP-LINK Tutorial: From Beginner to Expert</a></li>
+    <li aria-current="page">TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained</li>
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <div class="article-header__brand">
+          <span class="article-header__brand-chip" style="background:#6366f120;color:#6366f1">
+            📡 TP-LINK
+          </span>
+        </div>
+        <h1 class="article-header__title">TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained</h1>
+        <p class="article-header__summary">Confused by PPPoE, Dynamic IP and Static IP when setting up your router? Learn what each mode means, when to use which, and real-world examples.</p>
+      </header>
+
+      <div class="article-meta-bar">
+        <a href="../index.html?category=setup" class="article-meta-bar__category">🎓 TP-LINK Tutorial: From Beginner to Expert</a>
+        <span class="article-meta-bar__level article-meta-bar__level--beginner">Beginner</span>
+        <span class="article-meta-bar__brand">📡 TP-LINK</span>
+        <time class="article-meta-bar__date" datetime="2026-06-03">2026-06-03</time>
+      </div>
+
+      <!-- Google 广告位：文章头部下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      
+<nav class="article-toc" aria-label="table of contents">
+  <h3 class="article-toc__title">📑 Table of Contents</h3>
+  <ol class="article-toc__list">
+    <li class="article-toc__item article-toc__item--h3"><a href="#What%20is%20PPPoE%3F">1. What is PPPoE?</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#When%20to%20choose%20PPPoE%3F">2. When to choose PPPoE?</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#Setup%20Steps">3. Setup Steps</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#Common%20PPPoE%20Error%20Codes">4. Common PPPoE Error Codes</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#What%20is%20Dynamic%20IP%3F">5. What is Dynamic IP?</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#When%20to%20choose%20Dynamic%20IP%3F">6. When to choose Dynamic IP?</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#Setup%20Steps">7. Setup Steps</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#The%20Hidden%20Trap%3A%20Double%20NAT">8. The Hidden Trap: Double NAT</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#What%20is%20Static%20IP%3F">9. What is Static IP?</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#When%20to%20choose%20Static%20IP%3F">10. When to choose Static IP?</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#Setup%20Steps">11. Setup Steps</a></li>
+    <li class="article-toc__item article-toc__item--h3"><a href="#Steps">12. Steps</a></li>
+  </ol>
+</nav>
+
+      <div class="article-body">
+        <h2>1. Why Three Connection Modes?</h2>
+
+<p>When you first set up a router, the first step is usually choosing the "Internet Connection Type". Many people get stuck here.</p>
+
+<div class="scenario-box">
+<strong>One-sentence explanation:</strong>
+
+<ul><li>PPPoE → Your ISP gave you a "username + password" (like logging into an account)</li>
+<li>Dynamic IP (DHCP) → Plug and play, no credentials needed (like plugging in a USB drive)</li>
+<li>Static IP → Your ISP gave you a slip of paper with IP numbers (like a fixed street address)</li>
+</ul></div>
+
+<p>> 🎯 Choose the wrong mode = no internet. Let's go through each one.</p>
+
+<h2>2. PPPoE — The Classic Broadband Dial-up</h2>
+
+<h3 id="What is PPPoE?">What is PPPoE?</h3>
+
+<p>PPPoE (Point-to-Point Protocol over Ethernet) is "broadband dial-up". Your router needs to "dial" into your ISP's server, just like making a phone call, and authenticate with a username and password.</p>
+
+<h3 id="When to choose PPPoE?">When to choose PPPoE?</h3>
+
+<div class="example-box">
+<strong>Choose PPPoE when:</strong>
+
+<p>✅ Your optical modem (ONT) is in "bridge mode" (modem only converts light to electricity, doesn't dial)</p>
+<p>✅ Your ISP gave you a broadband username and password</p>
+<p>✅ You want the router to handle the dial-up connection (router WAN port → modem LAN port)</p>
+<p>✅ You switched from "modem dial-up" to "router dial-up"</p>
+
+<p>❌ The modem is already handling the connection (modem = router mode), choose "Dynamic IP" instead</p>
+</div>
+
+<h3 id="Setup Steps">Setup Steps</h3>
+
+<ul><li>Log into <code class="article-inline-code">tplogin.cn</code> → Network → Internet Settings</li>
+<li>Choose "PPPoE" (or "Broadband Dial-up")</li>
+<li>Enter the broadband username and password from your ISP</li>
+<li>Click Save</li>
+</ul>
+<p>> ⚠️ Broadband login is NOT your WiFi password! If you forgot it, call your ISP: China Telecom 10000 / China Unicom 10010 / China Mobile 10086.</p>
+
+<h3 id="Common PPPoE Error Codes">Common PPPoE Error Codes</h3>
+
+<div class="table-wrapper"><table class="article-table"><tr><th>Error</th><th>Cause</th><th>Solution</th></tr><tr><td>-------</td><td>-------</td><td>----------</td></tr><tr><td>651</td><td>Wrong username/password</td><td>Re-enter carefully, check case</td></tr><tr><td>691</td><td>Account already in use (another device is dialing)</td><td>Wait 1 minute and retry</td></tr><tr><td>678</td><td>Remote server not responding</td><td>Check if your modem is working</td></tr><tr><td>Frequent disconnects</td><td>Unstable line</td><td>Contact ISP for inspection</td></tr></table></div>
+<h2>3. Dynamic IP (DHCP) — Plug and Play</h2>
+
+<h3 id="What is Dynamic IP?">What is Dynamic IP?</h3>
+
+<p>Dynamic IP means your router automatically gets an IP address from the upstream device (usually your optical modem). No username or password needed — it's truly plug-and-play.</p>
+
+<h3 id="When to choose Dynamic IP?">When to choose Dynamic IP?</h3>
+
+<div class="example-box">
+<strong>Choose Dynamic IP (DHCP) when:</strong>
+
+<p>✅ Your optical modem is in "router mode" (modem handles the internet connection itself)</p>
+<p>✅ Router WAN port is connected to another router's LAN port (cascaded/secondary router)</p>
+<p>✅ Campus/office network (upstream device already assigns IPs)</p>
+<p>✅ Most home broadband default setup (modem dials → router auto-obtains IP)</p>
+
+<p>> 📊 In fact, ~80% of home broadband setups use this mode. That's why most new routers work right out of the box.</p>
+</div>
+
+<h3 id="Setup Steps">Setup Steps</h3>
+
+<ul><li>Log into <code class="article-inline-code">tplogin.cn</code> → Network → Internet Settings</li>
+<li>Choose "Dynamic IP" (or "DHCP" / "Auto-Obtain IP")</li>
+<li>Save — nothing else to fill in!</li>
+</ul>
+<h3 id="The Hidden Trap: Double NAT">The Hidden Trap: Double NAT</h3>
+
+<p>When you use "modem dials + router DHCP", you actually get two layers of NAT:</p>
+
+<pre class="article-pre"><code>Internet → Modem (NAT Layer 1) → Router (NAT Layer 2) → Your devices
+</code></pre>
+
+<p>This causes:</p>
+<ul><li>❌ Port forwarding, DDNS and remote access become difficult</li>
+<li>❌ Gaming NAT type becomes strict (affects multiplayer matchmaking)</li>
+<li>❌ Some P2P applications suffer reduced speed</li>
+</ul>
+<div class="tip-highlight">
+<p>🔧 <strong>Solution:</strong> Ask your ISP to switch the modem to "bridge mode", then let your router handle PPPoE dialing directly. Call and say "Please set my optical modem to bridge mode."</p>
+</div>
+
+<h2>4. Static IP — Manually Assigned, Rarely Used</h2>
+
+<h3 id="What is Static IP?">What is Static IP?</h3>
+
+<p>Your ISP assigns you a fixed, unchanging IP address that you must manually enter into your router. Like a permanent street address — others can always reach you at the same IP.</p>
+
+<h3 id="When to choose Static IP?">When to choose Static IP?</h3>
+
+<div class="example-box">
+<strong>Choose Static IP when:</strong>
+
+<p>✅ Business/commercial broadband (ISP gave you fixed IP details on paper)</p>
+<p>✅ Campus network requiring manual IP configuration</p>
+<p>✅ Special use cases (surveillance, servers needing a fixed public IP)</p>
+<p>✅ Some hotel/apartment networks</p>
+
+<p>❌ 99% of home users don't need this! Even if you have a public IP, it's usually a dynamically assigned one via PPPoE.</p>
+</div>
+
+<h3 id="Setup Steps">Setup Steps</h3>
+
+<ul><li>Log into <code class="article-inline-code">tplogin.cn</code> → Network → Internet Settings</li>
+<li>Choose "Static IP" (or "Fixed IP")</li>
+<li>Fill in the 4 pieces of info provided by your ISP:</li>
+</ul>
+<div class="table-wrapper"><table class="article-table"><tr><th>Field</th><th>Example</th><th>Description</th></tr><tr><td>-------</td><td>---------</td><td>-------------</td></tr><tr><td>IP Address</td><td><code class="article-inline-code">123.45.67.89</code></td><td>Your fixed public IP</td></tr><tr><td>Subnet Mask</td><td><code class="article-inline-code">255.255.255.0</code></td><td>Usually this value</td></tr><tr><td>Default Gateway</td><td><code class="article-inline-code">123.45.67.1</code></td><td>ISP's gateway address</td></tr><tr><td>DNS Server</td><td><code class="article-inline-code">8.8.8.8</code></td><td>Can use public DNS</td></tr></table></div>
+<p>> ⚠️ All four values must be correct — one wrong entry and you have no internet.</p>
+
+<h2>5. Quick Decision Tree</h2>
+
+<pre class="article-pre"><code>Did your ISP give you a username + password?
+├── Yes → Choose PPPoE
+└── No → Did they give you a paper with IP numbers?
+    ├── Yes → Choose Static IP
+    └── No → Choose Dynamic IP (DHCP)
+</code></pre>
+
+<div class="example-box">
+<strong>Three rules to remember:</strong>
+
+<ul><li><strong>Got username + password → PPPoE</strong> (classic broadband dial-up)</li>
+<li><strong>Got nothing → Dynamic IP</strong> (modem already handles it, just plug in)</li>
+<li><strong>Got a paper with IP numbers → Static IP</strong> (business broadband, very rare)</li>
+</ul></div>
+
+<h2>6. Special Scenario: Setting Up a Secondary Router</h2>
+
+<div class="scenario-box">
+<strong>Scenario: Adding a second router to extend WiFi coverage</strong>
+
+<p>Say your main router is at 192.168.0.1, and you're adding a TP-LINK as a secondary router:</p>
+
+<p>Option A: WAN port → main router LAN port</p>
+<ul><li>Connection mode: Choose "Dynamic IP"</li>
+<li>Secondary router gets an IP like 192.168.0.x automatically</li>
+<li>Downside: devices on main and secondary routers are on different subnets — can't see each other</li>
+</ul>
+<p>Option B: LAN port → main router LAN port (Recommended!)</p>
+<ul><li>First change the secondary router's LAN IP to 192.168.0.2 (same subnet as main)</li>
+<li>Disable the secondary router's DHCP server</li>
+<li>All devices are now on the same subnet, full visibility</li>
+<li>This effectively turns the secondary router into a "switch + AP"</li>
+</ul></div>
+
+<h2>7. MAC Address Cloning — The Lifesaver When Your New Router Won't Connect</h2>
+
+<p>Some ISPs (especially in certain regions) bind your broadband account to your old router's MAC address. When you get a new router, PPPoE fails even with the correct username and password.</p>
+
+<div class="example-box">
+<strong>Real-world case:</strong>
+
+<p>John got a new TP-LINK router. PPPoE credentials were correct, but it kept showing "Connection Failed". ISP support said "no restrictions on our end". After hours of troubleshooting, he discovered: the ISP had bound the account to the old router's MAC address.</p>
+
+<p>Solution: TP-LINK admin → Network → MAC Clone → enter the old router's MAC address → Save. Connected immediately.</p>
+</div>
+
+<h3 id="Steps">Steps</h3>
+
+<ul><li>Log into <code class="article-inline-code">tplogin.cn</code> → Network → Internet Settings</li>
+<li>Find the "MAC Clone" option</li>
+<li>Select "Use Custom MAC Address"</li>
+<li>Enter the old router's MAC address (found on the bottom label of the old router)</li>
+<li>Save and reboot</li>
+</ul>
+<p>> 💡 If you don't know the old MAC, choose "Clone Current PC MAC" to use your computer's MAC address for dial-up.</p>
+
+<h2>8. Comparison Summary</h2>
+
+<div class="table-wrapper"><table class="article-table"><tr><th>Aspect</th><th>PPPoE</th><th>Dynamic IP (DHCP)</th><th>Static IP</th></tr><tr><td>--------</td><td>-------</td><td>-------------------</td><td>-----------</td></tr><tr><td>Needs username/password</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr><tr><td>Needs manual IP entry</td><td>❌</td><td>❌</td><td>✅ Yes</td></tr><tr><td>Typical scenario</td><td>Modem bridge / router dials</td><td>Modem already dials / secondary router</td><td>Business / leased line</td></tr><tr><td>Home user share</td><td>~15%</td><td>~84%</td><td>~1%</td></tr><tr><td>IP changes?</td><td>May change each session</td><td>May change</td><td>Never changes</td></tr><tr><td>Public IP chance</td><td>Higher (varies by region)</td><td>Low (behind modem NAT)</td><td>100%</td></tr><tr><td>Setup difficulty</td><td>⭐ Enter credentials</td><td>⭐ Nothing to fill</td><td>⭐⭐ Enter 4 fields</td></tr></table></div>
+<div class="tip-highlight">
+<p>🎯 <strong>Core takeaways:</strong></p>
+
+<ul><li><strong>Got a username + password → Choose PPPoE</strong> — enter the credentials from your ISP</li>
+<li><strong>Got nothing → Choose Dynamic IP</strong> — your modem already handles the connection</li>
+<li><strong>Got IP details on paper → Choose Static IP</strong> — for business lines only</li>
+<li><strong>New router won't connect? Try MAC Clone</strong> — your ISP may have bound the old MAC</li>
+<li><strong>Want remote access to NAS/cameras? → Modem bridge mode + Router PPPoE</strong> — gives you a public IP</li>
+</ul></div>
+      </div>
+
+      <!-- Google 广告位：正文下方 -->
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="article-tags-bottom"><span class="article-tag">#TP-LINK</span><span class="article-tag">#PPPoE</span><span class="article-tag">#DHCP</span><span class="article-tag">#Static IP</span><span class="article-tag">#Broadband</span><span class="article-tag">#MAC Clone</span></div>
+
+      
+<nav class="article-prevnext" aria-label="Previous / Next">
+  <a href="router-default-ip-username-password.html" class="article-prevnext__prev"><span class="article-prevnext__label">← Previous</span><span class="article-prevnext__title">市面上所有路由器的默认IP地址和账户密码</span></a>
+  <span></span>
+</nav>
+      
+<section class="article-related">
+  <h2 class="article-related__title">📰 Related Articles</h2>
+  <div class="article-related__grid">
+    
+    <a href="tplink-unboxing-know-your-router.html" class="article-related__card">
+      <span class="article-related__category">🎓 TP-LINK Tutorial: From Beginner to Expert</span>
+      <span class="article-related__title">TP-LINK Router Unboxing: Getting to Know Your Router</span>
+      <span class="article-related__desc">Just got a new TP-LINK router? First, get familiar with every port, button, and LED indicator.</span>
+    </a>
+    
+    <a href="tplink-first-setup-internet.html" class="article-related__card">
+      <span class="article-related__category">🎓 TP-LINK Tutorial: From Beginner to Expert</span>
+      <span class="article-related__title">TP-LINK First-Time Setup & Internet Connection Guide</span>
+      <span class="article-related__desc">Complete setup from power-on to internet, using mobile app or web interface.</span>
+    </a>
+    
+    <a href="tplink-web-admin-setup.html" class="article-related__card">
+      <span class="article-related__category">🎓 TP-LINK Tutorial: From Beginner to Expert</span>
+      <span class="article-related__title">TP-LINK Web Admin Login & Basic Settings</span>
+      <span class="article-related__desc">Complete guide to the tplogin.cn admin interface: login, layout, and basic configuration.</span>
+    </a>
+    
+    <a href="tplink-web-admin-complete-guide.html" class="article-related__card">
+      <span class="article-related__category">🎓 TP-LINK Tutorial: From Beginner to Expert</span>
+      <span class="article-related__title">TP-LINK Admin Panel Complete Guide</span>
+      <span class="article-related__desc">Deep dive into every TP-LINK admin menu function from basic to advanced.</span>
+    </a>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Router Tips Station — Empowering everyone to master their router</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/article.js"></script>
+  <script>
+    // 初始化所有 Google 广告位
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

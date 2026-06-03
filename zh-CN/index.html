@@ -41,11 +41,12 @@
         <span>路由器技巧站</span>
       </a>
       <ul class="nav__links">
-        <li><a href="#home" class="nav__link">首页</a></li>
-        <li><a href="#brands" class="nav__link">品牌</a></li>
-        <li><a href="#categories" class="nav__link">分类</a></li>
         <li><a href="#tips" class="nav__link">技巧</a></li>
       </ul>
+      <div class="nav__search">
+        <input type="text" class="nav__search-input" placeholder="搜索路由器技巧，如「WiFi信号差」「端口转发」..." id="searchInput">
+        <button class="nav__search-btn" id="searchBtn" aria-label="搜索">🔍</button>
+      </div>
       <div class="nav__article-actions">
         <a href="../en-US/index.html" class="nav__lang-link">🌐 English</a>
       </div>
@@ -55,110 +56,14 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero__bg">
-      <div class="hero__orb hero__orb--1"></div>
-      <div class="hero__orb hero__orb--2"></div>
-      <div class="hero__orb hero__orb--3"></div>
-    </div>
-    <div class="hero__content">
-      <h1 class="hero__title">
-        掌握你的<span class="hero__highlight">路由器</span>
-      </h1>
-      <p class="hero__desc">从小白到高手，一站式路由器使用技巧大全。涵盖小米、华为、TP-LINK、华硕、网件等主流品牌</p>
-      <div class="hero__search">
-        <input type="text" class="hero__search-input" placeholder="搜索路由器技巧，如「WiFi信号差」「端口转发」..." id="searchInput">
-        <button class="hero__search-btn" id="searchBtn">🔍 搜索</button>
-      </div>
-      <div class="hero__stats">
-        <div class="hero__stat"><strong id="tipCount">111</strong><span>篇技巧文章</span></div>
-        <div class="hero__stat"><strong id="brandCount">8</strong><span>个品牌覆盖</span></div>
-        <div class="hero__stat"><strong id="cateCount">8</strong><span>个分类维度</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Google 广告位：Hero 下方横幅 -->
-  <div class="ad-container ad-container--banner">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-  </div>
-
-  <section class="section" id="brands">
-    <div class="container">
-      <h2 class="section__title">按品牌筛选</h2>
-      <div class="brand-filter" id="brandFilter">
-        <button class="filter-chip filter-chip--active" data-brand="all" style=""> 全部品牌</button>
-          <button class="filter-chip" data-brand="xiaomi" style="--chip-color:#ff6900">📱 小米</button>
-          <button class="filter-chip" data-brand="huawei" style="--chip-color:#cf0a2c">🔴 华为</button>
-          <button class="filter-chip" data-brand="tplink" style="--chip-color:#00b049">🔷 TP-LINK</button>
-          <button class="filter-chip" data-brand="asus" style="--chip-color:#0071e3">⚡ 华硕</button>
-          <button class="filter-chip" data-brand="netgear" style="--chip-color:#6441a5">🌐 网件</button>
-          <button class="filter-chip" data-brand="tenda" style="--chip-color:#e67e22">🔶 腾达</button>
-          <button class="filter-chip" data-brand="ruijie" style="--chip-color:#27ae60">🟢 锐捷</button>
-          <button class="filter-chip" data-brand="general" style="--chip-color:#6366f1">🛜 通用技巧</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="categories">
-    <div class="container">
-      <h2 class="section__title">按分类浏览</h2>
-      <div class="category-grid" id="categoryGrid">
-        <div class="cat-card" data-category="basics">
-          <span class="cat-card__icon">📖</span>
-          <span class="cat-card__name">基础概念</span>
-          <span class="cat-card__count">51 篇</span>
-        </div>
-        <div class="cat-card" data-category="setup">
-          <span class="cat-card__icon">🎓</span>
-          <span class="cat-card__name">以TP-LINK为样板，教你从路由器小白到大神</span>
-          <span class="cat-card__count">16 篇</span>
-        </div>
-        <div class="cat-card" data-category="optimize">
-          <span class="cat-card__icon">🚀</span>
-          <span class="cat-card__name">性能优化</span>
-          <span class="cat-card__count">8 篇</span>
-        </div>
-        <div class="cat-card" data-category="security">
-          <span class="cat-card__icon">🔒</span>
-          <span class="cat-card__name">安全防护</span>
-          <span class="cat-card__count">7 篇</span>
-        </div>
-        <div class="cat-card" data-category="troubleshoot">
-          <span class="cat-card__icon">🔧</span>
-          <span class="cat-card__name">故障排查</span>
-          <span class="cat-card__count">3 篇</span>
-        </div>
-        <div class="cat-card" data-category="advanced">
-          <span class="cat-card__icon">🧠</span>
-          <span class="cat-card__name">高级玩法</span>
-          <span class="cat-card__count">9 篇</span>
-        </div>
-        <div class="cat-card" data-category="mesh">
-          <span class="cat-card__icon">🏠</span>
-          <span class="cat-card__name">Mesh组网</span>
-          <span class="cat-card__count">2 篇</span>
-        </div>
-        <div class="cat-card" data-category="buying">
-          <span class="cat-card__icon">🛒</span>
-          <span class="cat-card__name">选购指南</span>
-          <span class="cat-card__count">15 篇</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="tips">
-    <div class="container">
-      <h2 class="section__title">全部技巧</h2>
-      <p class="section__subtitle" id="resultInfo">共 111 篇技巧</p>
-      <div class="tips-grid" id="tipsGrid">
-        <a href="articles/xiaomi-wifi-signal-optimization.html" class="tip-card" data-brand="xiaomi" data-category="optimize">
+  <div class="main-layout">
+    <main class="content-area">
+      <section class="section" id="tips">
+        <div class="container">
+          <h2 class="section__title">全部技巧</h2>
+          <p class="section__subtitle" id="resultInfo">共 112 篇技巧</p>
+          <div class="tips-grid" id="tipsGrid">
+            <a href="articles/xiaomi-wifi-signal-optimization.html" class="tip-card" data-brand="xiaomi" data-category="optimize">
           <span class="tip-card__brand" style="color:#ff6900">📱 小米</span>
           <h3 class="tip-card__title">小米路由器WiFi信号差的5个优化方法</h3>
           <p class="tip-card__desc">信号不满格？教你调整信道、摆放位置和开启穿墙模式，让全屋信号拉满。</p>
@@ -1157,22 +1062,85 @@
             <span class="tip-card__level tip-card__level--beginner">入门</span>
           </div>
         </a>
-      </div>
-      <div class="tips-empty" id="tipsEmpty" style="display:none;">
-        <span class="tips-empty__icon">📭</span>
-        <p>没有找到匹配的技巧，试试换个关键词？</p>
-      </div>
-    </div>
-  </section>
+        <a href="articles/tplink-internet-connection-modes.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#00b049">🔷 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK上网方式详解：PPPoE/动态IP/静态IP该怎么选？</h3>
+          <p class="tip-card__desc">设置路由器时被“上网方式”搞晕了？宽带拨号、动态IP、静态IP有什么区别？什么场景选哪个？一文讲透。</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 以TP-LINK为样板，教你从路由器小白到大神</span>
+            <span class="tip-card__level tip-card__level--beginner">入门</span>
+          </div>
+        </a>
+          </div>
+          <div class="tips-empty" id="tipsEmpty" style="display:none;">
+            <span class="tips-empty__icon">📭</span>
+            <p>没有找到匹配的技巧，试试换个关键词？</p>
+          </div>
+        </div>
+      </section>
 
-  <!-- Google 广告位：技巧列表下方横幅 -->
-  <div class="ad-container ad-container--banner">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </main>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__inner">
+        <h3 class="sidebar__title">📂 按分类浏览</h3>
+        <nav class="sidebar__list" id="categorySidebar">
+          <div class="sidebar__item sidebar__item--active" data-category="all">
+            <span class="sidebar__item-icon">📋</span>
+            <span class="sidebar__item-name">全部</span>
+            <span class="sidebar__item-count">112</span>
+          </div>
+          <div class="sidebar__item" data-category="basics">
+          <span class="sidebar__item-icon">📖</span>
+          <span class="sidebar__item-name">基础概念</span>
+          <span class="sidebar__item-count">51</span>
+        </div>
+          <div class="sidebar__item" data-category="setup">
+          <span class="sidebar__item-icon">🎓</span>
+          <span class="sidebar__item-name">以TP-LINK为样板，教你从路由器小白到大神</span>
+          <span class="sidebar__item-count">17</span>
+        </div>
+          <div class="sidebar__item" data-category="optimize">
+          <span class="sidebar__item-icon">🚀</span>
+          <span class="sidebar__item-name">性能优化</span>
+          <span class="sidebar__item-count">8</span>
+        </div>
+          <div class="sidebar__item" data-category="security">
+          <span class="sidebar__item-icon">🔒</span>
+          <span class="sidebar__item-name">安全防护</span>
+          <span class="sidebar__item-count">7</span>
+        </div>
+          <div class="sidebar__item" data-category="troubleshoot">
+          <span class="sidebar__item-icon">🔧</span>
+          <span class="sidebar__item-name">故障排查</span>
+          <span class="sidebar__item-count">3</span>
+        </div>
+          <div class="sidebar__item" data-category="advanced">
+          <span class="sidebar__item-icon">🧠</span>
+          <span class="sidebar__item-name">高级玩法</span>
+          <span class="sidebar__item-count">9</span>
+        </div>
+          <div class="sidebar__item" data-category="mesh">
+          <span class="sidebar__item-icon">🏠</span>
+          <span class="sidebar__item-name">Mesh组网</span>
+          <span class="sidebar__item-count">2</span>
+        </div>
+          <div class="sidebar__item" data-category="buying">
+          <span class="sidebar__item-icon">🛒</span>
+          <span class="sidebar__item-name">选购指南</span>
+          <span class="sidebar__item-count">15</span>
+        </div>
+        </nav>
+      </div>
+    </aside>
   </div>
 
   <footer class="footer">

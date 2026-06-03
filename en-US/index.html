@@ -41,11 +41,12 @@
         <span>Router Tips Station</span>
       </a>
       <ul class="nav__links">
-        <li><a href="#home" class="nav__link">Home</a></li>
-        <li><a href="#brands" class="nav__link">Brands</a></li>
-        <li><a href="#categories" class="nav__link">Categories</a></li>
         <li><a href="#tips" class="nav__link">Tips</a></li>
       </ul>
+      <div class="nav__search">
+        <input type="text" class="nav__search-input" placeholder="Search router tips, e.g. "WiFi signal weak", "port forwarding"..." id="searchInput">
+        <button class="nav__search-btn" id="searchBtn" aria-label="Search">🔍</button>
+      </div>
       <div class="nav__article-actions">
         <a href="../zh-CN/index.html" class="nav__lang-link">🌐 中文</a>
       </div>
@@ -55,110 +56,14 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero__bg">
-      <div class="hero__orb hero__orb--1"></div>
-      <div class="hero__orb hero__orb--2"></div>
-      <div class="hero__orb hero__orb--3"></div>
-    </div>
-    <div class="hero__content">
-      <h1 class="hero__title">
-        Master Your <span class="hero__highlight">Router</span>
-      </h1>
-      <p class="hero__desc">From beginner to expert, one-stop router tips collection. Covering Xiaomi, Huawei, TP-LINK, ASUS, Netgear and more</p>
-      <div class="hero__search">
-        <input type="text" class="hero__search-input" placeholder="Search router tips, e.g. "WiFi signal weak", "port forwarding"..." id="searchInput">
-        <button class="hero__search-btn" id="searchBtn">🔍 Search</button>
-      </div>
-      <div class="hero__stats">
-        <div class="hero__stat"><strong id="tipCount">111</strong><span> articles</span></div>
-        <div class="hero__stat"><strong id="brandCount">8</strong><span> brands covered</span></div>
-        <div class="hero__stat"><strong id="cateCount">8</strong><span> categories</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Google 广告位：Hero 下方横幅 -->
-  <div class="ad-container ad-container--banner">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-  </div>
-
-  <section class="section" id="brands">
-    <div class="container">
-      <h2 class="section__title">Filter by Brand</h2>
-      <div class="brand-filter" id="brandFilter">
-        <button class="filter-chip filter-chip--active" data-brand="all" style=""> All Brands</button>
-          <button class="filter-chip" data-brand="tplink" style="--chip-color:undefined">📡 TP-LINK</button>
-          <button class="filter-chip" data-brand="xiaomi" style="--chip-color:undefined">📱 Xiaomi</button>
-          <button class="filter-chip" data-brand="huawei" style="--chip-color:undefined">🔷 Huawei</button>
-          <button class="filter-chip" data-brand="asus" style="--chip-color:undefined">🎮 ASUS</button>
-          <button class="filter-chip" data-brand="netgear" style="--chip-color:undefined">🌐 Netgear</button>
-          <button class="filter-chip" data-brand="tenda" style="--chip-color:undefined">🏠 Tenda</button>
-          <button class="filter-chip" data-brand="ruijie" style="--chip-color:undefined">🏢 Ruijie</button>
-          <button class="filter-chip" data-brand="general" style="--chip-color:undefined">🛜 General Tips</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="categories">
-    <div class="container">
-      <h2 class="section__title">Browse by Category</h2>
-      <div class="category-grid" id="categoryGrid">
-        <div class="cat-card" data-category="basics">
-          <span class="cat-card__icon">📖</span>
-          <span class="cat-card__name">Basic Concepts</span>
-          <span class="cat-card__count">51 </span>
-        </div>
-        <div class="cat-card" data-category="setup">
-          <span class="cat-card__icon">🎓</span>
-          <span class="cat-card__name">TP-LINK Tutorial: From Beginner to Expert</span>
-          <span class="cat-card__count">16 </span>
-        </div>
-        <div class="cat-card" data-category="optimize">
-          <span class="cat-card__icon">🚀</span>
-          <span class="cat-card__name">Performance</span>
-          <span class="cat-card__count">8 </span>
-        </div>
-        <div class="cat-card" data-category="security">
-          <span class="cat-card__icon">🔒</span>
-          <span class="cat-card__name">Security</span>
-          <span class="cat-card__count">7 </span>
-        </div>
-        <div class="cat-card" data-category="troubleshoot">
-          <span class="cat-card__icon">🔧</span>
-          <span class="cat-card__name">Troubleshooting</span>
-          <span class="cat-card__count">3 </span>
-        </div>
-        <div class="cat-card" data-category="advanced">
-          <span class="cat-card__icon">🧠</span>
-          <span class="cat-card__name">Advanced</span>
-          <span class="cat-card__count">9 </span>
-        </div>
-        <div class="cat-card" data-category="mesh">
-          <span class="cat-card__icon">🕸️</span>
-          <span class="cat-card__name">Mesh Networking</span>
-          <span class="cat-card__count">2 </span>
-        </div>
-        <div class="cat-card" data-category="buying">
-          <span class="cat-card__icon">🛒</span>
-          <span class="cat-card__name">Buying Guide</span>
-          <span class="cat-card__count">15 </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="tips">
-    <div class="container">
-      <h2 class="section__title">All Tips</h2>
-      <p class="section__subtitle" id="resultInfo">111 tips total</p>
-      <div class="tips-grid" id="tipsGrid">
-        <a href="articles/xiaomi-wifi-signal-optimization.html" class="tip-card" data-brand="xiaomi" data-category="optimize">
+  <div class="main-layout">
+    <main class="content-area">
+      <section class="section" id="tips">
+        <div class="container">
+          <h2 class="section__title">All Tips</h2>
+          <p class="section__subtitle" id="resultInfo">112 tips total</p>
+          <div class="tips-grid" id="tipsGrid">
+            <a href="articles/xiaomi-wifi-signal-optimization.html" class="tip-card" data-brand="xiaomi" data-category="optimize">
           <span class="tip-card__brand" style="color:#6366f1">📱 Xiaomi</span>
           <h3 class="tip-card__title">小米路由器WiFi信号差的5个优化方法</h3>
           <p class="tip-card__desc">信号不满格？教你调整信道、摆放位置和开启穿墙模式，让全屋信号拉满。</p>
@@ -1157,22 +1062,85 @@
             <span class="tip-card__level tip-card__level--beginner">Beginner</span>
           </div>
         </a>
-      </div>
-      <div class="tips-empty" id="tipsEmpty" style="display:none;">
-        <span class="tips-empty__icon">📭</span>
-        <p>No matching tips found. Try another keyword?</p>
-      </div>
-    </div>
-  </section>
+        <a href="articles/tplink-internet-connection-modes.html" class="tip-card" data-brand="tplink" data-category="setup">
+          <span class="tip-card__brand" style="color:#6366f1">📡 TP-LINK</span>
+          <h3 class="tip-card__title">TP-LINK Internet Connection Modes: PPPoE vs Dynamic IP vs Static IP Explained</h3>
+          <p class="tip-card__desc">Confused by PPPoE, Dynamic IP and Static IP when setting up your router? Learn what each mode means, when to use which, and real-world examples.</p>
+          <div class="tip-card__meta">
+            <span class="tip-card__category">🎓 TP-LINK Tutorial: From Beginner to Expert</span>
+            <span class="tip-card__level tip-card__level--beginner">Beginner</span>
+          </div>
+        </a>
+          </div>
+          <div class="tips-empty" id="tipsEmpty" style="display:none;">
+            <span class="tips-empty__icon">📭</span>
+            <p>No matching tips found. Try another keyword?</p>
+          </div>
+        </div>
+      </section>
 
-  <!-- Google 广告位：技巧列表下方横幅 -->
-  <div class="ad-container ad-container--banner">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+      <div class="ad-container ad-container--banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </main>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__inner">
+        <h3 class="sidebar__title">📂 Browse by Category</h3>
+        <nav class="sidebar__list" id="categorySidebar">
+          <div class="sidebar__item sidebar__item--active" data-category="all">
+            <span class="sidebar__item-icon">📋</span>
+            <span class="sidebar__item-name">All</span>
+            <span class="sidebar__item-count">112</span>
+          </div>
+          <div class="sidebar__item" data-category="basics">
+          <span class="sidebar__item-icon">📖</span>
+          <span class="sidebar__item-name">Basic Concepts</span>
+          <span class="sidebar__item-count">51</span>
+        </div>
+          <div class="sidebar__item" data-category="setup">
+          <span class="sidebar__item-icon">🎓</span>
+          <span class="sidebar__item-name">TP-LINK Tutorial: From Beginner to Expert</span>
+          <span class="sidebar__item-count">17</span>
+        </div>
+          <div class="sidebar__item" data-category="optimize">
+          <span class="sidebar__item-icon">🚀</span>
+          <span class="sidebar__item-name">Performance</span>
+          <span class="sidebar__item-count">8</span>
+        </div>
+          <div class="sidebar__item" data-category="security">
+          <span class="sidebar__item-icon">🔒</span>
+          <span class="sidebar__item-name">Security</span>
+          <span class="sidebar__item-count">7</span>
+        </div>
+          <div class="sidebar__item" data-category="troubleshoot">
+          <span class="sidebar__item-icon">🔧</span>
+          <span class="sidebar__item-name">Troubleshooting</span>
+          <span class="sidebar__item-count">3</span>
+        </div>
+          <div class="sidebar__item" data-category="advanced">
+          <span class="sidebar__item-icon">🧠</span>
+          <span class="sidebar__item-name">Advanced</span>
+          <span class="sidebar__item-count">9</span>
+        </div>
+          <div class="sidebar__item" data-category="mesh">
+          <span class="sidebar__item-icon">🕸️</span>
+          <span class="sidebar__item-name">Mesh Networking</span>
+          <span class="sidebar__item-count">2</span>
+        </div>
+          <div class="sidebar__item" data-category="buying">
+          <span class="sidebar__item-icon">🛒</span>
+          <span class="sidebar__item-name">Buying Guide</span>
+          <span class="sidebar__item-count">15</span>
+        </div>
+        </nav>
+      </div>
+    </aside>
   </div>
 
   <footer class="footer">
